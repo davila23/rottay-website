@@ -1,97 +1,87 @@
-Welcome to the AWS CodeStar sample web application
-==================================================
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/bchiang7/v4/main/src/images/logo.png" width="100" />
+</div>
+<h1 align="center">
+  brittanychiang.com - v4
+</h1>
+<p align="center">
+  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+</p>
+<p align="center">
+  Previous iterations:
+  <a href="https://github.com/bchiang7/v1" target="_blank">v1</a>,
+  <a href="https://github.com/bchiang7/v2" target="_blank">v2</a>,
+  <a href="https://github.com/bchiang7/bchiang7.github.io" target="_blank">v3</a>
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-This sample code helps get you started with a simple Node.js web application
-deployed by AWS Elastic Beanstalk and AWS CloudFormation.
+![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
 
-What's Here
------------
+## 🚨 Forking this repo (please read!)
 
-This sample includes:
+Many people have contacted me asking me if they can use this code for their own website, and the answer to that question is usually **yes, with attribution**.
 
-* README.md - this file
-* .ebextensions/ - this directory contains the configuration files that
-  AWS Elastic Beanstalk will deploy your Express application
-* package.json - this file contains various metadata relevant to your Node.js
-  application such as dependencies
-* server.js - this file contains the code for your application
-* public/ - this directory contains static web assets used by your application
-* tests/ - this directory contains unit tests for your application
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
-* template-configuration.json - this file contains the project ARN with placeholders used for tagging resources with the project ID  
+I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
 
+Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Gatsby docs](https://www.gatsbyjs.org/docs/).
 
-Getting Started
----------------
+### TL;DR
 
-These directions assume you want to develop on your local computer, and not
-from the Amazon EC2 instance itself. If you're on the Amazon EC2 instance, the
-virtual environment is already set up for you, and you can start working on the
-code.
+Yes, you can fork this repo. Please give me proper credit by linking back to [brittanychiang.com](https://brittanychiang.com). Thanks!
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the AWS CodeStar user guide at https://docs.aws.amazon.com/codestar/latest/userguide/getting-started.html#clone-repo.
+## 🛠 Installation & Set Up
 
-1. Install Node.js on your computer. For details on available installers visit
-   https://nodejs.org/en/download/.
+1. Install the Gatsby CLI
 
-2. Install NPM dependencies:
+   ```sh
+   npm install -g gatsby-cli
+   ```
 
-        $ npm install
+2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
-3. Start the development server:
+   ```sh
+   nvm install
+   ```
 
-        $ node app.js
+3. Install dependencies
 
-4. Open http://127.0.0.1:3000/ in a web browser to view your application.
+   ```sh
+   yarn
+   ```
 
-What Do I Do Next?
-------------------
+4. Start the development server
 
-Once you have a virtual environment running, you can start making changes to
-the sample Node.js web application. We suggest making a small change to
-/public/index.html first, so you can see how changes pushed to
-your project's repository are automatically picked up and,deployed to the Amazon EC2
-instance by AWS Elastic Beanstalk. (You can watch the progress on your project dashboard.)
-Once you've seen how that works, start developing your own code, and have fun!
+   ```sh
+   npm start
+   ```
 
-To run your tests locally, go to the root directory of the
-sample code and run the `npm test` command, which
-AWS CodeBuild also runs through your `buildspec.yml` file.
+## 🚀 Building and Running for Production
 
-To test your new code during the release process, modify the existing tests or
-add tests to the tests directory. AWS CodeBuild will run the tests during the
-build stage of your project pipeline. You can find the test results
-in the AWS CodeBuild console.
+1. Generate a full static production build
 
-Learn more about AWS CodeBuild and how it builds and tests your application here:
-https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html
+   ```sh
+   npm run build
+   ```
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+1. Preview the site as it will appear once deployed
 
-User Guide: https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+   ```sh
+   npm run serve
+   ```
 
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+## 🎨 Color Reference
 
-How Do I Add Template Resources to My Project?
-------------------
-
-To add AWS resources to your project, you'll need to edit the `template.yml`
-file in your project's repository. You may also need to modify permissions for
-your project's worker roles. After you push the template change, AWS CodeStar
-and AWS CloudFormation provision the resources for you.
-
-See the AWS CodeStar user guide for instructions to modify your template:
-https://docs.aws.amazon.com/codestar/latest/userguide/how-to-change-project.html#customize-project-template
-
-What Should I Do Before Running My Project in Production?
-------------------
-
-AWS recommends you review the security best practices recommended by the framework
-author of your selected sample application before running it in production. You
-should also regularly review and apply any available patches or associated security
-advisories for dependencies used within your application.
-
-Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
+| Light Navy     | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
+| Lightest Navy  | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
+| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
+| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
+| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
+| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
+| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
