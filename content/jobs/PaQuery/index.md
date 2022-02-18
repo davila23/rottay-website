@@ -1,7 +1,7 @@
 ---
 date: '2018-04-01'
 title: 'Studio Developer'
-company: 'Scout'
+company: 'Nybble Group'
 location: 'Northeastern University'
 range: 'January - April 2018'
 url: 'https://web.northeastern.edu/scout/'

@@ -6,9 +6,10 @@ import { srConfig } from '@config';
 import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import { Cloud } from 'react-icon-cloud';
 
 const StyledJobsSection = styled.section`
-  max-width: 700px;
+  max-width: 1300px;
 
   .inner {
     display: flex;
@@ -128,10 +129,20 @@ const StyledHighlight = styled.div`
 
 const StyledTabPanels = styled.div`
   position: relative;
-  width: 100%;
+  width: 600px;
   margin-left: 20px;
 
   @media (max-width: 600px) {
+    margin-left: 0;
+  }
+`;
+
+const StyledTabCloud = styled.div`
+  position: relative;
+  width: 300px;
+  margin-left: 20px;
+
+  @media (max-width: 300px) {
     margin-left: 0;
   }
 `;
@@ -302,6 +313,118 @@ const Jobs = () => {
               );
             })}
         </StyledTabPanels>
+        <StyledTabCloud>
+          <Cloud>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="800"
+                width="800"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+            <a
+              href="https://emojipedia.org/globe-showing-americas/"
+              title="Visual Studio Code"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                height="80"
+                width="80"
+                alt="Visual Studio Code"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
+              />
+            </a>
+          </Cloud>
+        </StyledTabCloud>
       </div>
     </StyledJobsSection>
   );

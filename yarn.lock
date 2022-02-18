@@ -1042,6 +1042,11 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
+"@csstools/convert-colors@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-2.0.0.tgz#6dd323583b40cfe05aaaca30debbb30f26742bbf"
+  integrity sha512-P7BVvddsP2Wl5v3drJ3ArzpdfXMqoZ/oHOV/yFiGFb3JQr9Z9UXZ9tnHAKJsO89lfprR1F9ExW3Yij21EjEBIA==
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -11302,6 +11307,13 @@ react-helmet@^6.1.0:
     prop-types "^15.7.2"
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
+
+react-icon-cloud@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-icon-cloud/-/react-icon-cloud-4.0.0.tgz#78c9691b771aa5cb9e9d38d9ab46e57db205742f"
+  integrity sha512-wwqxk1bivUoLt8uzqYtT/KkMBTSAXfbyAqgbbuiF927/hFxnbjfVTJsGT6Vxa6IiEQ+cYjvtahgFcvqB1EiOxA==
+  dependencies:
+    "@csstools/convert-colors" "^2.0.0"
 
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

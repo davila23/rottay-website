@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { navLinks } from '@config';
+import { navLinks, mainNavLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
+
+import { globalHistory } from '@reach/router';
 
 const StyledMenu = styled.div`
   display: none;
@@ -235,6 +237,10 @@ const Menu = () => {
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
+  // Update navbar items
+
+  const navItems = globalHistory.location.pathname.includes('/davila') ? navLinks : mainNavLinks;
+
   return (
     <StyledMenu>
       <Helmet>
@@ -254,9 +260,9 @@ const Menu = () => {
 
         <StyledSidebar menuOpen={menuOpen} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1}>
           <nav ref={navRef}>
-            {navLinks && (
+            {navItems && (
               <ol>
-                {navLinks.map(({ url, name }, i) => (
+                {navItems.map(({ url, name }, i) => (
                   <li key={i}>
                     <Link to={url} onClick={() => setMenuOpen(false)}>
                       {name}

@@ -3,12 +3,13 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
-import { navLinks } from '@config';
+import { navLinks, mainNavLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
 
+import { globalHistory } from '@reach/router';
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -178,6 +179,10 @@ const Nav = ({ isHome }) => {
     </a>
   );
 
+  //const location = useLocation();
+  // console.log('location ', location)
+  const navItems = globalHistory.location.pathname.includes('/davila') ? navLinks : mainNavLinks;
+
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
@@ -187,8 +192,8 @@ const Nav = ({ isHome }) => {
 
             <StyledLinks>
               <ol>
-                {navLinks &&
-                  navLinks.map(({ url, name }, i) => (
+                {navItems &&
+                  navItems.map(({ url, name }, i) => (
                     <li key={i}>
                       <Link to={url}>{name}</Link>
                     </li>
@@ -213,8 +218,8 @@ const Nav = ({ isHome }) => {
               <ol>
                 <TransitionGroup component={null}>
                   {isMounted &&
-                    navLinks &&
-                    navLinks.map(({ url, name }, i) => (
+                    navItems &&
+                    navItems.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
                         <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
                           <Link to={url}>{name}</Link>
@@ -227,7 +232,7 @@ const Nav = ({ isHome }) => {
               <TransitionGroup component={null}>
                 {isMounted && (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
+                    <div style={{ transitionDelay: `${isHome ? navItems.length * 100 : 0}ms` }}>
                       {ResumeLink}
                     </div>
                   </CSSTransition>
