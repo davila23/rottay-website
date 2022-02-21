@@ -1,15 +1,25 @@
 ---
-date: '2017-12-21'
-title: 'Senior Software Engenieer'
-company: 'Security Scorecard'
+date: '8'
+title: 'Founder | Software Engineer'
+company: 'SecurityScorecad'
 location: 'Remote'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+vip: true
 ---
 
-Probando como queda el texto:
+---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+Functional Requirements:
+
+- Intranet Migration from Ruby to NextJs to unify technologies with the rest of the Company's Systems.
+- Support and continuous improvements to product. \->
+
+- [ ] #739
+
+Realized tasks:
+
+>
+
+- Develop a Nextjs application taking into account the UI / UX standards of the Company.
+- Set up a Graphql Server.

@@ -1,10 +1,13 @@
 ---
-date: '2018-04-01'
-title: 'Studio Developer'
-company: 'Nybble Group'
+date: '5'
+title: 'Software Engineer'
+company: 'Paquery'
 location: 'Northeastern University'
 range: 'January - April 2018'
 url: 'https://web.northeastern.edu/scout/'
+vip: false
+---
+
 ---
 
 - Worked with a team of three designers to build a marketing website and e-commerce platform for [blistabloc](https://blistabloc.com), an ambitious startup originating from Northeastern

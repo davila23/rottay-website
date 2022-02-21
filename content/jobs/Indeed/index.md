@@ -1,12 +1,23 @@
 ---
-date: '2016-12-21'
+date: '6'
 title: 'Team Lead'
 company: 'Indeed'
 location: 'Boston, MA'
 range: 'July - December 2016'
 url: 'https://starry.com/'
+vip: false
 ---
 
-- Engineered and maintained major features of Starry's customer-facing web app using ES6, Handlebars, Backbone, Marionette and CSS
-- Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with Starry Station
-- Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences across Starry’s iOS and Android mobile apps
+---
+
+Functional Requirements:
+
+- Design and development of the Notification System.
+- Research and document all sub-systems that send notifications to Users and incorporate them into the solution provided.
+
+Realized tasks:
+
+- Quality code reviews.
+- Coordinate with the different sectors of the company the change of responsibility for sending notifications.
+- Coordinate team efforts.
+- Preparation of performance reports to present to HR .

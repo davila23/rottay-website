@@ -1,10 +1,13 @@
 ---
-date: '2015-12-21'
+date: '6'
 title: 'Software Solutions Architect'
 company: 'Armstrong International'
 location: 'Boston, MA'
 range: 'July - December 2015'
 url: 'https://us.mullenlowe.com/'
+vip: false
+---
+
 ---
 
 - Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery

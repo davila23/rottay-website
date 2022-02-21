@@ -2,10 +2,10 @@ import React from 'react';
 
 const IconStar = () => (
   <svg
-    viewBox="0 0 24 24"
+    viewBox="0 -12 50 50"
     fill="none"
     stroke="currentColor"
-    strokeWidth="2"
+    strokeWidth="4"
     strokeLinecap="round"
     strokeLinejoin="round"
     className="feather feather-star">

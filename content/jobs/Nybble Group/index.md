@@ -1,10 +1,13 @@
 ---
-date: '2017-12-21'
-title: 'UI Engineer Co-op'
-company: 'Apple'
+date: '5'
+title: 'Devops'
+company: 'Nybble Group'
 location: 'Cupertino, CA'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+vip: true
+---
+
 ---
 
 - Developed and shipped highly interactive web applications for Apple Music using Ember.js

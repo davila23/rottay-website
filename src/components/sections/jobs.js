@@ -6,7 +6,10 @@ import { srConfig } from '@config';
 import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-import { Cloud } from 'react-icon-cloud';
+import { IconCloud } from 'react-icon-cloud';
+import allIcons from 'simple-icons';
+import { v4 } from 'uuid';
+import { IconStar } from '@components/icons';
 
 const StyledJobsSection = styled.section`
   max-width: 1300px;
@@ -190,6 +193,7 @@ const Jobs = () => {
               location
               range
               url
+              vip
             }
             html
           }
@@ -205,6 +209,134 @@ const Jobs = () => {
   const tabs = useRef([]);
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+
+  const iconSlugs = [
+    'typescript',
+    'javascript',
+    'dart',
+    'java',
+    'react',
+    'flutter',
+    'android',
+    'html5',
+    'css3',
+    'nodedotjs',
+    'express',
+    'nextdotjs',
+    'prisma',
+    'amazonaws',
+    'postgresql',
+    'firebase',
+    'nginx',
+    'vercel',
+    'testinglibrary',
+    'jest',
+    'cypress',
+    'docker',
+    'git',
+    'jira',
+    'github',
+    'gitlab',
+    'visualstudiocode',
+    'androidstudio',
+    'sonarqube',
+    'figma',
+  ];
+
+  const tagCanvasOptions = {
+    // activateAudio: string
+    // activeCursor: string
+    // altImage: boolean
+    // animTiming: 'Smooth' | 'Linear'
+    // audioIcon: boolean
+    // audioIconDark: boolean
+    // audioIconSize: number
+    // audioIconThickness: number
+    // audioVolume: number
+    // bgColor: null | string
+    // bgOutlineThickness: number
+    // bgRadius: number
+    // centreFunc: any
+    // centreImage: any
+    clickToFront: 500,
+    // decel: number
+    depth: 1,
+    // dragControl: boolean
+    // dragThreshold: number
+    // fadeIn: number
+    // freezeActive: boolean
+    // freezeDecel: boolean
+    // frontSelect: boolean
+    // hideTags: boolean
+    // imageAlign: 'centre' | 'left' | 'right'
+    // imageMode: null | 'image' | 'text' | 'both'
+    // imagePadding: number
+    // imagePosition: 'top' | 'bottom' | 'left' | 'right'
+    // imageRadius: number | string
+    imageScale: 2,
+    // imageVAlign: 'top' | 'bottom' | 'middle'
+    initial: [0.1, -0.1],
+    // interval: number
+    // lock: null | 'x' | 'y' | 'xy'
+    // maxBrightness: number
+    // maxSpeed: number
+    // minBrightness: number
+    // minSpeed: number
+    // minTags: 0 - 200
+    // noMouse: boolean
+    // noSelect: boolean
+    // noTagsMessage: string
+    // offsetX: number
+    // offsetY: number
+    outlineColour: '#0000',
+    // outlineDash: number
+    // outlineDashSpace: number
+    // outlineIncrease: number
+    // outlineMethod: 'outline' | 'classic' | 'block' | 'colour' | 'size' | 'none'
+    // outlineOffset: number
+    // outlineRadius: number
+    // outlineThickness: number
+    // padding: number
+    // pinchZoom: boolean
+    // pulsateTime: number
+    // pulstateTo: number
+    // radiusX: number
+    // radiusY: number
+    // radiusZ: number
+    // repeatTagsTags: 0 - 64
+    reverse: true,
+    // scrollPause: boolean
+    // shadow: string
+    // shadowBlur: number
+    // shadowOffset: [number,number] | number[]
+    // shape: 'sphere' | 'hcylinder' | 'vcylinder' | 'hring' | 'vring'
+    // shuffleTags: boolean
+    // splitWidth: number
+    // stretchX: number
+    // stretchY: number
+    // textAlign: 'centre' | 'left' | 'right'
+    // textColour: string
+    // textFont: string
+    // textHeight: number
+    // textVAlign: 'top' | 'bottom' | 'middle'
+    tooltip: 'native', // null | 'div'
+    // tooltipClass: string
+    tooltipDelay: 0,
+    // txtOpt: boolean
+    // txtScale: number
+    // weight: boolean
+    // weightFrom: any
+    // weightGradient: any
+    // weightMode: 'size' | 'colour' | 'both' | 'bgcolour' | 'bgoutline' | 'outline'
+    // weightSize: number
+    // weightSizeMax: number | null
+    // weightSizeMin: number | null
+    wheelZoom: false,
+    // zoom: number
+    // zoomMax: number
+    // zoomMin: number
+    // zoomStep: number
+  };
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -253,6 +385,11 @@ const Jobs = () => {
     }
   };
 
+  const iconTags = iconSlugs.map(slug => ({
+    id: slug,
+    simpleIcon: allIcons.Get(slug),
+  }));
+
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
       <h2 className="numbered-heading">Where I’ve Worked</h2>
@@ -261,7 +398,7 @@ const Jobs = () => {
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
           {jobsData &&
             jobsData.map(({ node }, i) => {
-              const { company } = node.frontmatter;
+              const { company, vip } = node.frontmatter;
               return (
                 <StyledTabButton
                   key={i}
@@ -274,18 +411,17 @@ const Jobs = () => {
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}>
                   <span>{company}</span>
+                  {vip && <IconStar />}
                 </StyledTabButton>
               );
             })}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
-
         <StyledTabPanels>
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
               const { title, url, company, range } = frontmatter;
-
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
                   <StyledTabPanel
@@ -304,9 +440,7 @@ const Jobs = () => {
                         </a>
                       </span>
                     </h3>
-
                     <p className="range">{range}</p>
-
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                   </StyledTabPanel>
                 </CSSTransition>
@@ -314,116 +448,16 @@ const Jobs = () => {
             })}
         </StyledTabPanels>
         <StyledTabCloud>
-          <Cloud>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="800"
-                width="800"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-            <a
-              href="https://emojipedia.org/globe-showing-americas/"
-              title="Visual Studio Code"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                height="80"
-                width="80"
-                alt="Visual Studio Code"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/globe-showing-americas_1f30e.png"
-              />
-            </a>
-          </Cloud>
+          <IconCloud
+            key={v4()}
+            id={'icon'}
+            minContrastRatio={1}
+            iconSize={50}
+            backgroundHexColor={'#fff'}
+            fallbackHexColor={'#000'}
+            tags={iconTags}
+            tagCanvasOptions={tagCanvasOptions}
+          />
         </StyledTabCloud>
       </div>
     </StyledJobsSection>
