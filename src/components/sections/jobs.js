@@ -8,11 +8,10 @@ import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 import { IconCloud } from 'react-icon-cloud';
 import allIcons from 'simple-icons';
-import { v4 } from 'uuid';
 import { IconStar } from '@components/icons';
 
 const StyledJobsSection = styled.section`
-  max-width: 1300px;
+  max-width: 1200px;
 
   .inner {
     display: flex;
@@ -142,10 +141,11 @@ const StyledTabPanels = styled.div`
 
 const StyledTabCloud = styled.div`
   position: relative;
-  width: 300px;
-  margin-left: 20px;
+  width: 400px;
+  margin-top: 5%;
+  margin-left: 30px;
 
-  @media (max-width: 300px) {
+  @media (max-width: 400px) {
     margin-left: 0;
   }
 `;
@@ -183,7 +183,7 @@ const Jobs = () => {
     query {
       jobs: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___id], order: ASC }
       ) {
         edges {
           node {
@@ -194,6 +194,10 @@ const Jobs = () => {
               range
               url
               vip
+              technologies {
+                name
+                size
+              }
             }
             html
           }
@@ -209,39 +213,6 @@ const Jobs = () => {
   const tabs = useRef([]);
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
-
-  const iconSlugs = [
-    'typescript',
-    'javascript',
-    'dart',
-    'java',
-    'react',
-    'flutter',
-    'android',
-    'html5',
-    'css3',
-    'nodedotjs',
-    'express',
-    'nextdotjs',
-    'prisma',
-    'amazonaws',
-    'postgresql',
-    'firebase',
-    'nginx',
-    'vercel',
-    'testinglibrary',
-    'jest',
-    'cypress',
-    'docker',
-    'git',
-    'jira',
-    'github',
-    'gitlab',
-    'visualstudiocode',
-    'androidstudio',
-    'sonarqube',
-    'figma',
-  ];
 
   const tagCanvasOptions = {
     // activateAudio: string
@@ -385,10 +356,12 @@ const Jobs = () => {
     }
   };
 
-  const iconTags = iconSlugs.map(slug => ({
-    id: slug,
-    simpleIcon: allIcons.Get(slug),
+  const iconTags = activedtag => jobsData[activedtag].node.frontmatter.technologies.map(slug => ({
+    id: slug.name,
+    simpleIcon: allIcons.Get(slug.name),
   }));
+
+  const iconSize = activedtag => jobsData[activedtag].node.frontmatter.technologies.size;
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
@@ -422,6 +395,7 @@ const Jobs = () => {
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
               const { title, url, company, range } = frontmatter;
+
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
                   <StyledTabPanel
@@ -449,13 +423,13 @@ const Jobs = () => {
         </StyledTabPanels>
         <StyledTabCloud>
           <IconCloud
-            key={v4()}
+            key={activeTabId}
             id={'icon'}
             minContrastRatio={1}
-            iconSize={50}
+            iconSize={iconSize(activeTabId)}
             backgroundHexColor={'#fff'}
             fallbackHexColor={'#000'}
-            tags={iconTags}
+            tags={iconTags(activeTabId)}
             tagCanvasOptions={tagCanvasOptions}
           />
         </StyledTabCloud>

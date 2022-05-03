@@ -1,16 +1,31 @@
 ---
-date: '5'
+id: '5'
 title: 'Devops'
 company: 'Nybble Group'
 location: 'Cupertino, CA'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: true
 ---
 
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+Functional Requirements:
+
+- Provide a model to calculate life insurance conditions based on parameters such as age, marital status, salary, type of work and smoking.
+- Provide a life insurance claim handling system.
+
+Realized tasks:
+
+- CI / CD / Pipeline.
+- Docker / Kubernetes
+- Development and performance improvement of APIs using Hibernate Criteria.
+- Swagger integration to the system for documentation of end points.
+- Create TEST for each CRUD of the system and of the most common processes with Katalon Studio.

@@ -1,10 +1,17 @@
 ---
-date: '6'
+id: '2'
 title: 'Team Lead'
 company: 'Indeed'
 location: 'Boston, MA'
 range: 'July - December 2016'
 url: 'https://starry.com/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: false
 ---
 
@@ -13,7 +20,8 @@ vip: false
 Functional Requirements:
 
 - Design and development of the Notification System.
-- Research and document all sub-systems that send notifications to Users and incorporate them into the solution provided.
+
+* Research and document all sub-systems that send notifications to Users and incorporate them into the solution provided.
 
 Realized tasks:
 

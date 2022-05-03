@@ -111,6 +111,18 @@ const StyledPic = styled.div`
       left: 20px;
       z-index: -1;
     }
+
+    a {
+      padding: 10px;
+
+      &.hashtag {
+        padding-left: 20px;
+      }
+    }
+
+    .hashtag {
+      padding-left: 20px;
+    }
   }
 `;
 
@@ -126,7 +138,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'JavaScript (ES6+)',
+    'Java',
+    'React',
+    'Node.js',
+    'Postgres',
+    'MongoDB',
+    'Docker',
+    'AWS Services',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,30 +157,40 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hi! I'm Daniel, an Argentine Systems Engineer with over 12 years of experience working
+              in the backend, frontend, and AWS Cloud Services.
             </p>
-
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              I enjoy working on projects that really make a difference, building things that have
+              an impact on users. In that sense, I have performed in different roles and
+              technologies; I adapt to the team’s needs.
             </p>
-
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              I am a Crypto enthusiast. So, feel free to contact me if you are interested in:
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #Bitcoin{' '}
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #Blockchain
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #NFTs
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #Metaverse
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #DeFi
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #Web3
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #DAO
+              </a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #SmartContracts
+              </a>
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

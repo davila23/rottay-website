@@ -1,10 +1,17 @@
 ---
-date: '6'
+id: '4'
 title: 'Senior Software Engenieer'
 company: 'Dashpass'
 location: 'Remote'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: false
 ---
 

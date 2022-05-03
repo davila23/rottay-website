@@ -1,16 +1,30 @@
 ---
-date: '2'
+id: '6'
 title: 'Senior Software Engenieer'
 company: 'Fiat'
 location: 'Remote'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+technologies:
+  [
+    { name: 'amazon', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: false
 ---
 
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+Functional Requirements:
+
+- Provide a system which handles the access of employees to the factory.
+- Register and manage the working time of each employee.
+- Provide automated reporting on access and presence of employees.
+- Generate anomalies reports and send alerts to those responsible for the area.
+
+Realized tasks:
+
+- Analysis, Time estimates, Development and Documentation.
+- Make demos in the client's office.

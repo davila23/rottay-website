@@ -1,10 +1,17 @@
 ---
-date: '99'
+id: '0'
 title: 'Founder | Software Engineer'
 company: 'Rottay'
 location: 'Remote'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+technologies:
+  [
+    { name: 'typescript', size: 150 },
+    { name: 'java', size: 50 },
+    { name: 'haskell', size: 50 },
+    { name: 'react', size: 150 },
+  ]
 vip: false
 ---
 

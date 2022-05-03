@@ -2,7 +2,7 @@ import React from 'react';
 
 const IconStar = () => (
   <svg
-    viewBox="0 -12 50 50"
+    viewBox="0 -12 25 50"
     fill="none"
     stroke="currentColor"
     strokeWidth="4"

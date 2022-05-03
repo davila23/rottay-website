@@ -1,10 +1,17 @@
 ---
-date: '6'
+id: '3'
 title: 'Software Solutions Architect'
 company: 'Armstrong International'
 location: 'Boston, MA'
 range: 'July - December 2015'
 url: 'https://us.mullenlowe.com/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: false
 ---
 

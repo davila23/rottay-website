@@ -1,10 +1,17 @@
 ---
-date: '5'
+id: '5'
 title: 'Software Engineer'
 company: 'Paquery'
 location: 'Northeastern University'
 range: 'January - April 2018'
 url: 'https://web.northeastern.edu/scout/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'html5', size: 70 },
+    { name: 'angular', size: 80 },
+  ]
 vip: false
 ---
 

@@ -1,18 +1,30 @@
 ---
-date: '1'
+id: '8'
 title: 'Software Engineer'
 company: 'Puente Hermanos'
 location: 'Remote'
 range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
+technologies:
+  [
+    { name: 'typescript', size: 100 },
+    { name: 'java', size: 40 },
+    { name: 'android', size: 70 },
+    { name: 'react', size: 80 },
+  ]
 vip: false
 ---
 
 ---
 
-Probando como queda el texto:
+Functional Requirements
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Improve the general user experience of the customer portal.
+- Add trading functions to the customer portal.
+- Integrate with the NASDAQ trading platform.
+
+Realized tasks :
+
+- Design and Development Internal pages.
+- Prepare tests using Selenium.
+- Include bootstrap so that the system is available on all devices.
