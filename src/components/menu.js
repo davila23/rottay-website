@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { navLinks, mainNavLinks } from '@config';
+import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
 
@@ -239,7 +239,7 @@ const Menu = () => {
 
   // Update navbar items
 
-  const navItems = globalHistory.location.pathname.includes('/davila') ? navLinks : mainNavLinks;
+  const navItems = globalHistory.location.pathname.includes('/davila') ? navLinks : navLinks;
 
   return (
     <StyledMenu>
