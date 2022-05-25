@@ -244,7 +244,7 @@ const Jobs = () => {
     // imagePadding: number
     // imagePosition: 'top' | 'bottom' | 'left' | 'right'
     // imageRadius: number | string
-    imageScale: 2,
+    imageScale: 3,
     // imageVAlign: 'top' | 'bottom' | 'middle'
     initial: [0.1, -0.1],
     // interval: number
@@ -356,10 +356,11 @@ const Jobs = () => {
     }
   };
 
-  const iconTags = activedtag => jobsData[activedtag].node.frontmatter.technologies.map(slug => ({
-    id: slug.name,
-    simpleIcon: allIcons.Get(slug.name),
-  }));
+  const iconTags = activedtag =>
+    jobsData[activedtag].node.frontmatter.technologies.map(slug => ({
+      id: slug.name,
+      simpleIcon: allIcons.Get(slug.name),
+    }));
 
   const iconSize = activedtag => jobsData[activedtag].node.frontmatter.technologies.size;
 

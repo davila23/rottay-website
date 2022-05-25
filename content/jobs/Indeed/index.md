@@ -17,15 +17,22 @@ vip: false
 
 ---
 
-Functional Requirements:
+<font size = 2 face = "Courier New" >
 
-- Design and development of the Notification System.
+#### Functional Requirements:
 
-* Research and document all sub-systems that send notifications to Users and incorporate them into the solution provided.
+➤ Design and development of the Notification System to centralize communication with users in a single service.  
+➤ Survey and documentation of all sub-systems that interact with users, either via App (Push Notification) or Email (AWS SNS), and incorporate them into the solution provided.
 
-Realized tasks:
+#### Realized tasks:
 
-- Quality code reviews.
-- Coordinate with the different sectors of the company the change of responsibility for sending notifications.
-- Coordinate team efforts.
-- Preparation of performance reports to present to HR .
+» Preparation of performance reports presenting to HR.  
+» Coordinate and delegate team tasks, code reviews.  
+» Documentation of the Architecture and integrations carried out.  
+» Coordinate with the different sectors of the company the change of responsibility for sending notifications to users.
+
+#### Technologies used:
+
+Java / AWS SQS / AWS SNS / Jenkins / MongoDB / Jira Management Tool / Datadog / Docker / Bash / AWS DynamoDB / AWS RDS / AWS S3 / AWS Cloudfront.
+
+</font>

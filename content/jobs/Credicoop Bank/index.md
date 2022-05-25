@@ -7,46 +7,55 @@ range: 'May 2018 - Present'
 url: 'https://www.upstatement.com/'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'java', size: 50 },
+    { name: 'apache', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'auth0', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'elasticsearch', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'kubernetes', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: true
 ---
 
 ---
 
-Functional Requirements:
+<font size = 2 face = "Courier New" >
 
-- Automate the Interactive Voice Response (IVR) systems of the Credicoop Bank. The former IVR system is based on Asterisk. The new IVR ystem must provide the following automated functions to the end users:
+#### Functional Requirements:
 
-  • Generation of PIN.
+➤ Migration of the IVR'S of the Credicoop, Segurcoop, Cabal Card, and COTO Bank from native Asterisk to JAVA, to reduce the number of calls handled by the Customer Service Call Center, automating the most commonly performed tasks, such as :
 
-  • Balance order for Accounts / cards.
+→ Activation of Credit and Debit cards.  
+ → Reports of loss/theft of cards.  
+ → PIN generation.  
+ → Account/Card balance request.  
+ → Transfers between own accounts.  
+ → Buy dollars.  
+ → Consultation of Aerolineas Plus points.
 
-  • Transfers between own accounts.
+➤ Generation of logs that are easy to use by the BI sector.
 
-  • Dollar purchase.
+#### Realized tasks:
 
-  • Consultation of Argentine Airline Plus points.
+» Analysis, design of the Software Architecture, development and production start-up.  
+» Maintenance and Support of service queues to the Customer Service Call Center.  
+» Coordination of tasks between the Technology and Product management.  
+» Internal training on Asterisk and IP Telephony.
 
-  • Activation of Credit and Debit cards.
+#### Technologies used:
 
-  • Report card theft or loss.
+Java / Hibernate / Maven / Asterisk / AngularJS / PHP / Linux / Perl / Python / MySQL Server / Oracle / Bash / C / MongoDB.
 
-  • Activation of Credit cards and Debit cards.
-
-  » Provide an easy-to-use log to be used by the Business Intelligence Department.
-
-- Realized tasks:
-
-  » Analysis, Software Architecture Design, Coding and Production Start-Up.
-
-  » Coordination of Tasks and Internal Training.
-
-  » Lead the engineering team.
-
-  » Train new technical staff.
-
-  » Handling of Customer service attention Queues.
+</font>

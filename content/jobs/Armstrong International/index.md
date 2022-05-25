@@ -17,6 +17,27 @@ vip: false
 
 ---
 
-- Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery
-- Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness
-- Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more
+<font size = 2 face = "Courier New" >
+
+#### Functional Requirements:
+
+➤ Development an on-premise version of the product using Docker.  
+➤ Replacement of the User Authentication module from CAS/SAML 1.1 to Keycloak.  
+➤ Development Licensing module using License 3j.  
+➤ Migration AWS S3 Buckets to Minio.  
+➤ Integration with Salesforce.
+
+#### Realized tasks:
+
+» Updating the Authentication Services of each sub-system.  
+» Migration users from MongoDB to Keycloak.  
+» Extraction of logs and current status of each container.  
+» Code obfuscation with ProGuard.  
+» Initialization Script (a single command initializes all containers and validates the license).  
+» Documentation for developers and installation tutorials for customers.
+
+#### Technologies used:
+
+Docker / Bash / Java / Drupal / Javascript / AWS Services / MongoDb / Postgres / Keycloak / Minio / Rabbit / SAML / CAS / ProGuard / L3j.
+
+</font>

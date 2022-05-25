@@ -156,23 +156,21 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>
+            <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
               Hi! I'm Daniel, an Argentine Systems Engineer with over 12 years of experience working
               in the backend, frontend, and AWS Cloud Services.
             </p>
-            <p>
+            <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
               I enjoy working on projects that really make a difference, building things that have
               an impact on users. In that sense, I have performed in different roles and
               technologies; I adapt to the team’s needs.
             </p>
-            <p>
+            <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
               I am a Crypto enthusiast. So, feel free to contact me if you are interested in:
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
-                #Bitcoin{' '}
+                #Bitcoin
               </a>
-              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
-                #Blockchain
-              </a>
+              <a href="https://us.mullenlowe.com/">#Blockchain</a>
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
                 #NFTs
               </a>
@@ -188,12 +186,12 @@ const About = () => {
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
                 #DAO
               </a>
-              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
-                #SmartContracts
-              </a>
+              <a href="https://us.mullenlowe.com/">#SmartContracts</a>
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
+              Here are a few technologies I’ve been working with recently:
+            </p>
           </div>
 
           <ul className="skills-list">

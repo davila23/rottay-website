@@ -7,25 +7,47 @@ range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'amazons3', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'auth0', size: 150 },
+    { name: 'bootstrap', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'datadog', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'graphql', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'kubernetes', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'amazondynamodb', size: 150 },
   ]
 vip: true
 ---
 
 ---
 
-Functional Requirements:
+<font size = 2 face = "Courier New" >
 
-- Provide a model to calculate life insurance conditions based on parameters such as age, marital status, salary, type of work and smoking.
-- Provide a life insurance claim handling system.
+#### Functional Requirements:
 
-Realized tasks:
+➤ Design and develop microservices to calculate life insurance contributions based on age, salary, type of job, smoker, family group, etc.  
+➤ Development of life insurance claims management system.
 
-- CI / CD / Pipeline.
-- Docker / Kubernetes
-- Development and performance improvement of APIs using Hibernate Criteria.
-- Swagger integration to the system for documentation of end points.
-- Create TEST for each CRUD of the system and of the most common processes with Katalon Studio.
+#### Realized tasks:
+
+» Development and performance improvement of APIs, using Hibernate Criteria.  
+» Integration of Swagger to the system for the documentation of endpoints.  
+» Creation of test for all the CRUD of the System and the most important processes with Katalon Studio.  
+» QA Automation → CI/CD/AWS CodePipeline.  
+» Dockerization of development environments.
+
+#### Technologies used:
+
+Java / Katalon Studio / Spring Boot / Hibernate / Oracle / Angular 6 / Docker / Kubernetes / Swagger / AWS Fargate / AWS CloudFront / AWS RDS / AWS CodePipeline.
+
+</font>

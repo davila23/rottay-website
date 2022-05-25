@@ -60,15 +60,12 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Daniel Avila.</h2>;
-  const three = <h3 className="big-heading">Systems Engineer.</h3>;
+  const three = <h3 className="big-heading">System Engineer.</h3>;
   const four = (
     <>
-      <p>
-        I am a fullstak developer with more than 12 years of experience developing in different
-        Technologies and Industries{' '}
-        <a href="https://wwww.rottay.com/" target="_blank" rel="noreferrer">
-          ROTTAY.
-        </a>
+      <p style={{ fontFamily: 'Courier New', fontSize: '17px' }}>
+        I am an Argentinian Fullstack Developer with more than 12 years of experience developing in
+        different Technologies and Industries.{' '}
       </p>
     </>
   );

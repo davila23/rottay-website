@@ -7,26 +7,64 @@ range: 'July - December 2017'
 url: 'https://www.apple.com/music/'
 technologies:
   [
-    { name: 'typescript', size: 50 },
-    { name: 'java', size: 50 },
-    { name: 'android', size: 50 },
-    { name: 'react', size: 50 },
+    { name: 'typescript', size: 350 },
+    { name: 'react', size: 150 },
+    { name: 'amazons3', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'auth0', size: 150 },
+    { name: 'babel', size: 150 },
+    { name: 'bootstrap', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'datadog', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'elasticsearch', size: 150 },
+    { name: 'eslint', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'graphql', size: 150 },
+    { name: 'javascript', size: 150 },
+    { name: 'jenkins', size: 150 },
+    { name: 'jest', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'kubernetes', size: 150 },
+    { name: 'lerna', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'lodash', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'npm', size: 150 },
+    { name: 'pagerduty', size: 150 },
+    { name: 'redis', size: 150 },
+    { name: 'redux', size: 150 },
+    { name: 'rubyonrails', size: 150 },
+    { name: 'salesforce', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'typescript', size: 150 },
+    { name: 'webpack', size: 150 },
   ]
 vip: true
 ---
 
 ---
 
-Functional Requirements:
+<font size = 2 face = "Courier New" >
 
-- Intranet Migration from Ruby to NextJs to unify technologies with the rest of the Company's Systems.
-- Support and continuous improvements to product. \->
+#### Functional Requirements:
 
-- [ ] #739
+➤ Evolutionary development of the Marketplace UI.  
+➤ Third-party app integrations with the company services (Slack, Jira, MS Teams, Zapier, Salesforce Cloud, Zendesk, etc).  
+➤ Workflow automation to notify users or make changes within the portfolios of each customer.  
+➤ Micro FrontEnds with Webpack Module Federation to develop and deploy UI business subdomains in an isolated way.
 
-Realized tasks:
+#### Realized tasks:
 
->
+» Design and validation (Ajv) of the manifest schema for publishing apps.  
+» Event subscriptions with RxJS.  
+» Development and maintenance of the Rule Builder, to automate processes.
 
-- Develop a Nextjs application taking into account the UI / UX standards of the Company.
-- Set up a Graphql Server.
+#### Technologies used:
+
+React / Redux / NodeJs / MongoDB / Postgres / Jenkins / AWS Services / Docker / Webpack.
+
+</font>

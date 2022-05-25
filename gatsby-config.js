@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Rottay',
     description:
-      'Daniel Avila is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Daniel Avila is a Software Engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://rottay.com/davila', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@rottay',

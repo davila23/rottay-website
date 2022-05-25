@@ -7,16 +7,58 @@ range: 'January - April 2018'
 url: 'https://web.northeastern.edu/scout/'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'html5', size: 70 },
-    { name: 'angular', size: 80 },
+    { name: 'java', size: 50 },
+    { name: 'react', size: 150 },
+    { name: 'angularjs', size: 150 },
+    { name: 'apache', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'auth0', size: 150 },
+    { name: 'bootstrap', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'datadog', size: 150 },
+    { name: 'angular', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'graphql', size: 150 },
+    { name: 'javascript', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'npm', size: 150 },
+    { name: 'rabbitmq', size: 150 },
+    { name: 'redis', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'typescript', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-- Worked with a team of three designers to build a marketing website and e-commerce platform for [blistabloc](https://blistabloc.com), an ambitious startup originating from Northeastern
-- Helped solidify a brand direction for blistabloc that spans both packaging and web
-- Interfaced with clients on a weekly basis, providing technological expertise
+<font size = 2 face = "Courier New" >
+
+#### Functional Requirements:
+
+➤ Migration of a monolithic Java Application to microservices in Node.  
+➤ Support of existing applications, server, and database maintenance.  
+➤ Cloud Architecture Design with AWS.
+
+#### Realized tasks:
+
+» Integration of Here Maps.  
+» Replacement of postal codes by Polygonal Zones.  
+» Minimum path between destinations, optimal path considering traffic statistics and inclement weather.  
+» Conversion of addresses into geo-coordinates and vice-versa.  
+» Dockerize environments and database migration to AWS RDS.  
+» Cloud Architecture → IAM, AWS Cognito, AWS Route 53, AWS EC2, AWS S3, AWS CodePipeline, AWS Fargate, AWS RDB.
+
+#### Technologies used:
+
+NodeJS / ReactJS / Java / AngularJS / Hibernate / Docker / MySql Server / AWS Services.
+
+</font>

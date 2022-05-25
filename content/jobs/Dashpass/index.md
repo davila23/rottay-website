@@ -17,7 +17,21 @@ vip: false
 
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+<font size = 2 face = "Courier New" >
+
+#### Functional Requirements:
+
+➤ Maintenance and development of the Access Control System.  
+➤ Generation anomaly reports and automatic sending alerts to those responsible for each area.  
+➤ Periodic personnel management reports; the number of days worked, amount of hours on the factory, consumption in vending machines, access to the dining room, etc.
+
+#### Realized tasks:
+
+» Analysis, estimation of times, development, and documentation.  
+» Company access automation by scanning the ID card or security code.
+
+#### Technologies used:
+
+Java / Spring Boot / Maven / Oracle / Tomcat / Bash / SQL triggers / AWS Cloudwatch / AWS SNS / AWS Cloudtrail.
+
+</font>

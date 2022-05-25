@@ -2,7 +2,7 @@
 date: '1'
 title: 'Build a Spotify Connected App'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/halcyon-site'
+github: ''
 external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
 cta: 'https://www.newline.co/courses/build-a-spotify-connected-app'
 tech:
