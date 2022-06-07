@@ -1,14 +1,14 @@
 ---
-date: '2017-04-03'
-title: 'myNEU Redesign'
-github: 'https://github.com/bchiang7/Redesign-myNEU'
-external: 'https://bchiang7.github.io/Redesign-myNEU/'
+date: '2022-04-03'
+title: 'Cryptozombies'
+github: 'https://github.com/loomnetwork/cryptozombie-lessons'
+external: 'https://cryptozombies.io/en/course'
 tech:
-  - Jekyll
-  - SCSS
-  - JS
-company: 'Northeastern'
-showInProjects: false
+  - Solidity
+  - Ethereum
+  - Chainlink
+company: 'Cryptozombies'
+showInProjects: true
 ---
 
-Student web portal prototype built after conducting multiple rounds of user testing that aimed to improve the current portal to provide students at Northeastern University with a better user experience.
+Free, open source, interactive code school that teaches build games on Ethereum.
