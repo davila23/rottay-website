@@ -3,21 +3,40 @@ id: '2'
 title: 'Team Lead'
 company: 'Indeed'
 location: 'Boston, MA'
-range: 'July - December 2016'
-url: 'https://starry.com/'
+range: 'February 2020 - October 2020 '
+url: 'https://ar.indeed.com/?r=us'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'typescript', size: 350 },
+    { name: 'java', size: 50 },
+    { name: 'react', size: 150 },
+    { name: 'amazondynamodb', size: 150 },
+    { name: 'amazons3', size: 150 },
+    { name: 'apache', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'datadog', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'graphql', size: 150 },
+    { name: 'jenkins', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'kubernetes', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'npm', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

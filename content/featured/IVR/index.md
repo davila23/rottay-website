@@ -1,15 +1,15 @@
 ---
 date: '4'
-title: 'IVR'
+title: 'Interactive Voice Response for business'
 cover: './demo2.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+github: ''
+external: ''
 tech:
   - Asterisk
   - IVR
-  - Express
-  - Spotify API
-  - Heroku
+  - Bash
+  - Java
+  - PBX
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+Interactive Voice Response (IVR) is a technology that lets businesses automate customer interactions in both inbound and outbound calls via pre-recorded voice messages & Text to Speech technology. It works on DTMF input entered by the customer. With IVR, interact with callers & route calls to agents when required

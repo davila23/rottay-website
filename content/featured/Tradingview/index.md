@@ -2,14 +2,13 @@
 date: '3'
 title: 'Pine Script'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+github: ''
+external: ''
 tech:
-  - React
-  - Styled Components
-  - Express
-  - Spotify API
-  - Heroku
+  - Pinescript
+  - Elliott wave
+  - Wyckoff
+  - Trading Strategies
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+Automation of trading systems and customization of indicators, using the native programming language of Tradingview: Pinescript.

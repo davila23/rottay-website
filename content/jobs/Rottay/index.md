@@ -3,7 +3,7 @@ id: '0'
 title: 'Founder | Software Engineer'
 company: 'Rottay'
 location: 'Remote'
-range: 'July - December 2017'
+range: 'April 2018 - Present'
 url: 'https://www.rottay.com'
 technologies:
   [
@@ -60,7 +60,7 @@ vip: false
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

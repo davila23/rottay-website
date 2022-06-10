@@ -3,21 +3,36 @@ id: '3'
 title: 'Software Solutions Architect'
 company: 'Armstrong International'
 location: 'Boston, MA'
-range: 'July - December 2015'
-url: 'https://us.mullenlowe.com/'
+range: 'September 2019 - February 2020'
+url: 'https://www.armstronginternational.com/product-systems/sage-by-armstrong'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'java', size: 50 },
+    { name: 'amazondynamodb', size: 150 },
+    { name: 'amazons3', size: 150 },
+    { name: 'apache', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'npm', size: 150 },
+    { name: 'salesforce', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

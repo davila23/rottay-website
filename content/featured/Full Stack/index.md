@@ -1,10 +1,10 @@
 ---
 date: '1'
-title: 'Build a Spotify Connected App'
+title: 'Software Engineering'
 cover: './demo.png'
 github: ''
-external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
-cta: 'https://www.newline.co/courses/build-a-spotify-connected-app'
+external: ''
+cta: ''
 tech:
   - Java
   - React
@@ -12,6 +12,4 @@ tech:
   - Angular
 ---
 
-Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-
-Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+We offer a comprehensive array of software engineering services based on agile methodologies and continuous delivery to provide software development and team augmentation integrated to ongoing projects or collaborating from the very beginning. We can cover the full development cycle: discovery and requirements analysis, design and functional/technical architecture, UI/UX design, coding, testing & QA automation, project management and DevOps.

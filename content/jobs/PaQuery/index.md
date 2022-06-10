@@ -3,8 +3,8 @@ id: '5'
 title: 'Software Engineer'
 company: 'Paquery'
 location: 'Northeastern University'
-range: 'January - April 2018'
-url: 'https://web.northeastern.edu/scout/'
+range: 'January 2019 - September 2019'
+url: 'https://paquery.com/'
 technologies:
   [
     { name: 'java', size: 50 },
@@ -12,23 +12,18 @@ technologies:
     { name: 'angularjs', size: 150 },
     { name: 'apache', size: 150 },
     { name: 'atom', size: 150 },
-    { name: 'auth0', size: 150 },
     { name: 'bootstrap', size: 150 },
     { name: 'css3', size: 150 },
-    { name: 'datadog', size: 150 },
     { name: 'angular', size: 150 },
     { name: 'docker', size: 150 },
     { name: 'eclipseide', size: 150 },
     { name: 'github', size: 150 },
-    { name: 'gradle', size: 150 },
     { name: 'graphql', size: 150 },
     { name: 'javascript', size: 150 },
     { name: 'jira', size: 150 },
     { name: 'json', size: 150 },
     { name: 'linux', size: 150 },
-    { name: 'mongodb', size: 150 },
     { name: 'npm', size: 150 },
-    { name: 'rabbitmq', size: 150 },
     { name: 'redis', size: 150 },
     { name: 'spring', size: 150 },
     { name: 'swagger', size: 150 },
@@ -40,7 +35,7 @@ vip: false
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

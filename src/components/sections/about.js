@@ -166,10 +166,10 @@ const About = () => {
               technologies; I adapt to the team’s needs.
             </p>
             <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
-              I am a Crypto enthusiast. So, feel free to contact me if you are interested in:
-              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
-                #Bitcoin
-              </a>
+              I am a Crypto enthusiast. So, feel free to contact me if you are interested in:{' '}
+            </p>
+            <p style={{ fontFamily: 'Courier New', marginTop: '-10px' }}>
+              <a href="https://us.mullenlowe.com/">#Bitcoin</a>
               <a href="https://us.mullenlowe.com/">#Blockchain</a>
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
                 #NFTs
@@ -180,13 +180,13 @@ const About = () => {
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
                 #DeFi
               </a>
-              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
-                #Web3
-              </a>
+              <a href="https://us.mullenlowe.com/">#Web3</a>
               <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
                 #DAO
               </a>
-              <a href="https://us.mullenlowe.com/">#SmartContracts</a>
+              <a href="https://us.mullenlowe.com/" style={{ paddingLeft: '5px' }}>
+                #SmartContracts
+              </a>
             </p>
 
             <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>

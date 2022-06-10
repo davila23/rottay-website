@@ -50,6 +50,8 @@ const Icon = ({ name }) => {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Linktr':
+      return <IconTwitter />;
     default:
       return <IconExternal />;
   }

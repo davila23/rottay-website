@@ -3,8 +3,8 @@ id: '1'
 title: 'Founder | Software Engineer'
 company: 'SecurityScorecad'
 location: 'Remote'
-range: 'July - December 2017'
-url: 'https://www.apple.com/music/'
+range: 'October 2020 - Present'
+url: 'https://securityscorecard.com/'
 technologies:
   [
     { name: 'typescript', size: 350 },
@@ -48,7 +48,7 @@ vip: true
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

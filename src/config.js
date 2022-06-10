@@ -3,6 +3,10 @@ module.exports = {
 
   socialMedia: [
     {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/avila-daniel',
+    },
+    {
       name: 'GitHub',
       url: 'https://github.com/davila23',
     },
@@ -11,12 +15,8 @@ module.exports = {
       url: 'https://www.instagram.com/davila23_',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/rottay',
-    },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/avila-daniel',
+      name: 'External',
+      url: 'https://linktr.ee/davila23',
     },
   ],
 

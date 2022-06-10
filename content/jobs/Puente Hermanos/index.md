@@ -3,8 +3,8 @@ id: '8'
 title: 'Software Engineer'
 company: 'Puente Hermanos'
 location: 'Remote'
-range: 'July - December 2017'
-url: 'https://www.apple.com/music/'
+range: 'January 2012 - April 2014'
+url: 'https://www.puentenet.com/'
 technologies:
   [
     { name: 'java', size: 50 },
@@ -26,7 +26,7 @@ vip: false
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

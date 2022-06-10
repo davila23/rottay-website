@@ -1,23 +1,37 @@
 ---
 id: '5'
 title: 'Software Engineer'
-company: 'SanCord'
+company: 'SanCord Salud'
 location: 'Northeastern University'
-range: 'January - April 2018'
-url: 'https://web.northeastern.edu/scout/'
+range: 'March 2019 - February 2020'
+url: 'https://www.sancorsalud.com.ar/'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'html5', size: 70 },
-    { name: 'angular', size: 80 },
+    { name: 'typescript', size: 350 },
+    { name: 'java', size: 50 },
+    { name: 'amazons3', size: 150 },
+    { name: 'angularjs', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'auth0', size: 150 },
+    { name: 'bootstrap', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'angular', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'datadog', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 

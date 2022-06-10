@@ -1,37 +1,56 @@
 ---
 id: '4'
 title: 'Senior Software Engenieer'
-company: 'Dashpass'
+company: 'DashPass'
 location: 'Remote'
-range: 'July - December 2017'
-url: 'https://www.apple.com/music/'
+range: 'September 2019 - February 2020'
+url: 'https://www.dashpass.net'
 technologies:
   [
-    { name: 'typescript', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'java', size: 50 },
+    { name: 'react', size: 150 },
+    { name: 'amazons3', size: 150 },
+    { name: 'android', size: 150 },
+    { name: 'apache', size: 150 },
+    { name: 'atlassian', size: 150 },
+    { name: 'atom', size: 150 },
+    { name: 'bootstrap', size: 150 },
+    { name: 'css3', size: 150 },
+    { name: 'datadog', size: 150 },
+    { name: 'docker', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'gradle', size: 150 },
+    { name: 'javascript', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'mongodb', size: 150 },
+    { name: 'npm', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'typescript', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 
-➤ Maintenance and development of the Access Control System.  
-➤ Generation anomaly reports and automatic sending alerts to those responsible for each area.  
-➤ Periodic personnel management reports; the number of days worked, amount of hours on the factory, consumption in vending machines, access to the dining room, etc.
+➤ Re designed the application architecture to be able to scale up and handle a high number of request per minute.
+➤ Migration from Google Cloud to Amazon Services to unify accounts.
 
 #### Realized tasks:
 
-» Analysis, estimation of times, development, and documentation.  
-» Company access automation by scanning the ID card or security code.
+» Design / implementation of new features.
+» Server maintenance, coordination of deployments between mobile and backend teams.
 
 #### Technologies used:
 
-Java / Spring Boot / Maven / Oracle / Tomcat / Bash / SQL triggers / AWS Cloudwatch / AWS SNS / AWS Cloudtrail.
+Java / Spring Boot / MongoDB / Redis / React / Android / Bash / Swift / AWS Services / Datadog .
 
 </font>

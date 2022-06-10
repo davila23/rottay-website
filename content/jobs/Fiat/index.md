@@ -3,21 +3,27 @@ id: '6'
 title: 'Senior Software Engenieer'
 company: 'Fiat'
 location: 'Remote'
-range: 'July - December 2017'
-url: 'https://www.apple.com/music/'
+range: 'December 2016 - November 2017'
+url: 'https://www.fiat.com.ar/'
 technologies:
   [
-    { name: 'amazon', size: 100 },
-    { name: 'java', size: 40 },
-    { name: 'android', size: 70 },
-    { name: 'react', size: 80 },
+    { name: 'java', size: 50 },
+    { name: 'apache', size: 150 },
+    { name: 'eclipseide', size: 150 },
+    { name: 'github', size: 150 },
+    { name: 'jira', size: 150 },
+    { name: 'json', size: 150 },
+    { name: 'linux', size: 150 },
+    { name: 'spring', size: 150 },
+    { name: 'swagger', size: 150 },
+    { name: 'ubuntu', size: 150 },
   ]
 vip: false
 ---
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono">
 
 #### Functional Requirements:
 

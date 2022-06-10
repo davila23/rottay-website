@@ -2,9 +2,9 @@
 id: '5'
 title: 'Devops'
 company: 'Nybble Group'
-location: 'Cupertino, CA'
-range: 'July - December 2017'
-url: 'https://www.apple.com/music/'
+location: 'Remote'
+range: 'May 2018 - July 2019'
+url: 'https://www.nybblegroup.com/'
 technologies:
   [
     { name: 'amazons3', size: 150 },
@@ -31,7 +31,7 @@ vip: true
 
 ---
 
-<font size = 2 face = "Courier New" >
+<font size = 2 face = "Andale Mono" >
 
 #### Functional Requirements:
 
