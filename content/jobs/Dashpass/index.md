@@ -41,12 +41,12 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Re designed the application architecture to be able to scale up and handle a high number of request per minute.
+➤ Re designed the application architecture to be able to scale up and handle a high number of request per minute.  
 ➤ Migration from Google Cloud to Amazon Services to unify accounts.
 
 #### Realized tasks:
 
-» Design / implementation of new features.
+» Design / implementation of new features.  
 » Server maintenance, coordination of deployments between mobile and backend teams.
 
 #### Technologies used:

@@ -176,7 +176,7 @@ const Nav = ({ isHome }) => {
   const ResumeLink = (
     <a
       className="resume-button"
-      href="/Daniel-Avila-Resume.pdf"
+      href="https://drive.google.com/file/d/1LNaXzCW5Zfg9fHlw3t0hg4-9VmZLUP9k/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer">
       Resume
