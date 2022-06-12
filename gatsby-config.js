@@ -6,7 +6,7 @@ module.exports = {
     description:
       'Daniel Avila is a Software Engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://rottay.com/davila', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/me.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@rottay',
   },
   plugins: [
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'DanielAvila',
-        short_name: 'DanielAvila',
+        name: 'DanielA vila',
+        short_name: 'davila',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
