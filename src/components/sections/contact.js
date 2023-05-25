@@ -16,7 +16,7 @@ const StyledContactSection = styled.section`
   .overline {
     display: block;
     margin-bottom: 20px;
-    color: var(--green);
+    color: var(--purple);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
@@ -37,7 +37,7 @@ const StyledContactSection = styled.section`
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 100px;
   }
 `;
 

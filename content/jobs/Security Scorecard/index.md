@@ -52,16 +52,21 @@ vip: true
 
 #### Functional Requirements:
 
-➤ Evolutionary development of the Marketplace UI.  
-➤ Third-party app integrations with the company services (Slack, Jira, MS Teams, Zapier, Salesforce Cloud, Zendesk, etc).  
-➤ Workflow automation to notify users or make changes within the portfolios of each customer.  
-➤ Micro FrontEnds with Webpack Module Federation to develop and deploy UI business subdomains in an isolated way.
+❗ MARKETPLACE
+
+➤ Implementation of third-party app integrations such as Slack, Jira, MS Teams, Zapier, Salesforce,
+Zendesk, etc. This allows users to access and use these services within the platform seamlessly.  
+➤ ContinualmarketplaceUIdevelopmentandimprovementtoenhanceuserexperienceand
+engagement (https://platform.securityscorecard.io/#/marketplace)  
+➤ Implementingworkflowautomationtofacilitateautomatednotificationsandchangeswithin
+customer portfolios.  
+➤ Use Micro Frontend with Webpack Module Federation to develop and deploy UI business subdomains isolatedly. This allows for greater modularity and scalability of the application.
 
 #### Realized tasks:
 
-» Design and validation (Ajv) of the manifest schema for publishing apps.  
-» Event subscriptions with RxJS.  
-» Development and maintenance of the Rule Builder, to automate processes.
+» Design and validation of the manifest schema for publishing apps using Ajv.  
+» Event subscriptions with RxJS to enable event-driven development.  
+» Development and maintenance of the Rule Builder to automate processes and simplify workflow.
 
 #### Technologies used:
 

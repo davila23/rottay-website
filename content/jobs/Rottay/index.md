@@ -1,9 +1,9 @@
 ---
 id: '0'
-title: 'Founder | Software Engineer'
+title: 'Co-Founder | Software Engineer'
 company: 'Rottay'
 location: 'Remote'
-range: 'April 2018 - Present'
+range: 'April 2017 - Present'
 url: 'https://www.rottay.com'
 technologies:
   [
@@ -64,16 +64,16 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Migration of On-Premise Environments to AWS Cloud.  
+➤ Migration of On-Premise Environments to Cloud providers (AWS/GCP).  
 ➤ Automation of trading strategies in Tradingview with Pine Script.  
-➤ SaaS Development Services → architecture design, development, and deployment of multi-user Applications.  
+➤ SaaS Development Services → Architecture design, development, and deployment of multi-user Applications.  
 ➤ Design, development, and support of High availability Cloud solutions for Web and Mobile Applications.  
-➤ Interactive Voice Response (IVR) → Automate frequent responses allowing the customer to self-manage their queries, create personalized greetings, collect voice and DTMF comments, routing to operators, management of Customer Service queues.
+➤ Interactive Voice Response (IVR) → Automate frequent responses allowing the customer to self- manage their queries, create personalized greetings, collect voice and DTMF comments, routing to operators, management of Customer Service queues.
 
 #### Realized tasks:
 
 » Direct contact with the client. Budgets and estimation of project deadlines.  
-» Software Architecture design, development and code reviews.  
+» Software Architecture design, development, and code reviews.  
 » Management tasks; planning, creating, and tracking tickets in Jira.
 
 #### Technologies used:

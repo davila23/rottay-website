@@ -18,7 +18,7 @@ const StyledHeroSection = styled.section`
 
   h1 {
     margin: 0 0 30px 4px;
-    color: var(--green);
+    color: var(--purple);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
@@ -45,6 +45,14 @@ const StyledHeroSection = styled.section`
   }
 `;
 
+const calculateYearsOfExperience = () => {
+  const startDate = new Date(2010, 0, 1);
+  const currentDate = new Date();
+  const yearDifference = currentDate.getFullYear() - startDate.getFullYear();
+
+  return yearDifference;
+};
+
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -64,8 +72,8 @@ const Hero = () => {
   const four = (
     <>
       <p style={{ fontFamily: 'Courier New', fontSize: '17px' }}>
-        I am an Argentinian Fullstack Developer with more than 12 years of experience developing in
-        different Technologies and Industries.{' '}
+        I am an Argentinian Fullstack Developer with more than {calculateYearsOfExperience()} years
+        of experience developing in different Technologies and Industries.{' '}
       </p>
     </>
   );
