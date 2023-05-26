@@ -40,15 +40,14 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Design and development of the Notification System to centralize communication with users in a single service.  
-➤ Survey and documentation of all sub-systems that interact with users, either via App (Push Notification) or Email (AWS SNS), and incorporate them into the solution provided.
+➤ Led the Design and Development of a Notification System aimed at centralizing communication with users in a single Service. Prior to this project, different micro-services were communicating with the user, sometimes triggering multiple notifications without proper logs.  
+➤ Survey and document all sub-systems that interact with users via App (Push Notification) or Email (AWS SNS) and incorporate them into the solution provided. Worked closely with various teams to ensure a smooth transition to production and the replacement of each code fragment.
 
 #### Realized tasks:
 
-» Preparation of performance reports presenting to HR.  
-» Coordinate and delegate team tasks, code reviews.  
-» Documentation of the Architecture and integrations carried out.  
-» Coordinate with the different sectors of the company the change of responsibility for sending notifications to users.
+» Coordinated and delegated team tasks to ensure timely and efficient completion of project deliverables.  
+» Documented the system's architecture and integrations carried out, which involved creating comprehensive technical documentation that outlined the Notification System's design, implementation, and functionality.  
+» Collaborated with different departments within the company to transfer responsibility for sending notifications to users to the centralized Notification System
 
 #### Technologies used:
 

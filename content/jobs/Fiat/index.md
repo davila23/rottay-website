@@ -27,14 +27,15 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Maintenance and development of the Access Control System.  
-➤ Generation anomaly reports and automatic sending alerts to those responsible for each area.  
-➤ Periodic personnel management reports; the number of days worked, amount of hours on the factory, consumption in vending machines, access to the dining room, etc.
+➤ Maintain and develop the Access Control System.  
+➤ Generate anomaly reports and automatically send alerts to the responsible parties for each area.  
+➤ Provide automated reporting on access and presence of employees.  
+➤ Generate anomalies reports and send alerts to those responsible for the area.
 
 #### Realized tasks:
 
-» Analysis, estimation of times, development, and documentation.  
-» Company access automation by scanning the ID card or security code.
+» Analysis, Time estimates, Development and Documentation.  
+» Make demos in the client's office.
 
 #### Technologies used:
 
