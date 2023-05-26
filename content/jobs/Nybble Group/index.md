@@ -26,7 +26,7 @@ technologies:
     { name: 'swagger', size: 150 },
     { name: 'amazondynamodb', size: 150 },
   ]
-vip: true
+vip: false
 ---
 
 ---

@@ -11,7 +11,7 @@ import allIcons from 'simple-icons';
 import { IconStar } from '@components/icons';
 
 const StyledJobsSection = styled.section`
-  max-width: 1200px;
+  max-width: 1050px;
 
   .inner {
     display: flex;
@@ -131,8 +131,9 @@ const StyledHighlight = styled.div`
 
 const StyledTabPanels = styled.div`
   position: relative;
-  width: 950px;
+  width: 1050px;
   margin-left: 20px;
+  line-height: 2;
 
   @media (max-width: 600px) {
     margin-left: 0;
@@ -140,9 +141,10 @@ const StyledTabPanels = styled.div`
 `;
 
 const StyledTabCloud = styled.div`
-  position: relative;
-  width: 300px;
-  margin-top: 200px;
+  position: revert;
+  width: 160px;
+  margin-top: 40px;
+  margin-left: 30px;
 `;
 
 const StyledTabPanel = styled.div`
