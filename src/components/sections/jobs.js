@@ -43,7 +43,7 @@ const StyledTabList = styled.div`
     margin-left: -50px;
     margin-bottom: 30px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 80px) {
     width: calc(100% + 50px);
     padding-left: 25px;
     margin-left: -25px;
@@ -131,7 +131,7 @@ const StyledHighlight = styled.div`
 
 const StyledTabPanels = styled.div`
   position: relative;
-  width: 600px;
+  width: 950px;
   margin-left: 20px;
 
   @media (max-width: 600px) {
@@ -141,13 +141,8 @@ const StyledTabPanels = styled.div`
 
 const StyledTabCloud = styled.div`
   position: relative;
-  width: 400px;
-  margin-top: 5%;
-  margin-left: 30px;
-
-  @media (max-width: 400px) {
-    margin-left: 0;
-  }
+  width: 300px;
+  margin-top: 200px;
 `;
 
 const StyledTabPanel = styled.div`
