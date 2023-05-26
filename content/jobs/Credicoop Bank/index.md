@@ -37,24 +37,24 @@ vip: true
 
 #### Functional Requirements:
 
-➤ Migration of the IVR'S of the Credicoop, Segurcoop, Cabal Card, and COTO Bank from native Asterisk to JAVA, to reduce the number of calls handled by the Customer Service Call Center, automating the most commonly performed tasks, such as :
+➤ Migrate the IVRs of Credicoop, Segurcoop, Cabal Card, and COTO Bank from native Asterisk to Java in order to reduce the call volume handled by the Customer Service Call Center, automating common tasks such as
 
-→ Activation of Credit and Debit cards.  
- → Reports of loss/theft of cards.  
+→ Credit and debit card activation.  
+ → Reporting lost/stolen cards.  
  → PIN generation.  
- → Account/Card balance request.  
- → Transfers between own accounts.  
- → Buy dollars.  
- → Consultation of Aerolineas Plus points.
+ → Account/card balance inquiries.  
+ → Transfers between personal accounts.
+→ Currency exchange (purchasing dollars).  
+ → Checking Aerolineas Plus points.
 
-➤ Generation of logs that are easy to use by the BI sector.
+➤ Create easily accessible logs for the Business Intelligence (BI) sector.
 
 #### Realized tasks:
 
-» Analysis, design of the Software Architecture, development and production start-up.  
-» Maintenance and Support of service queues to the Customer Service Call Center.  
-» Coordination of tasks between the Technology and Product management.  
-» Internal training on Asterisk and IP Telephony.
+» Analyzed, designed the software architecture, developed, and launched the solution into production.  
+» Maintained and supported service queues for the Customer Service Call Center.  
+» Coordinated tasks between the Technology and Product Management departments.  
+» Conducted internal training on Asterisk and IP Telephony.
 
 #### Technologies used:
 

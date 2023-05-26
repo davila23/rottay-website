@@ -56,9 +56,9 @@ vip: true
 
 ➤ Implementation of third-party app integrations such as Slack, Jira, MS Teams, Zapier, Salesforce,
 Zendesk, etc. This allows users to access and use these services within the platform seamlessly.  
-➤ ContinualmarketplaceUIdevelopmentandimprovementtoenhanceuserexperienceand
-engagement (https://platform.securityscorecard.io/#/marketplace)  
-➤ Implementingworkflowautomationtofacilitateautomatednotificationsandchangeswithin
+➤ Continual marketplace UI development and improvement to enhance user experience and
+engagement → https://platform.securityscorecard.io/#/marketplace  
+➤ Implementing workflow automation to facilit ateautomated notifications and changes within
 customer portfolios.  
 ➤ Use Micro Frontend with Webpack Module Federation to develop and deploy UI business subdomains isolatedly. This allows for greater modularity and scalability of the application.
 

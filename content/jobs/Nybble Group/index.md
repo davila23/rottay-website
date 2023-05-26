@@ -35,16 +35,16 @@ vip: true
 
 #### Functional Requirements:
 
-➤ Design and develop microservices to calculate life insurance contributions based on age, salary, type of job, smoker, family group, etc.  
-➤ Development of life insurance claims management system.
+➤ Design and develop micro-services to calculate life insurance premiums based on factors such as age, salary, job type, smoking habits, and family group.  
+➤ Develop a life insurance claims Management System.
 
 #### Realized tasks:
 
-» Development and performance improvement of APIs, using Hibernate Criteria.  
-» Integration of Swagger to the system for the documentation of endpoints.  
-» Creation of test for all the CRUD of the System and the most important processes with Katalon Studio.  
-» QA Automation → CI/CD/AWS CodePipeline.  
-» Dockerization of development environments.
+» Developed and optimized API performance using Hibernate Criteria.  
+» Integrated Swagger for endpoint documentation within the system.  
+» Created comprehensive tests for all CRUD operations and critical processes using Katalon Studio.
+» Implemented QA automation, including CI/CD and AWS CodePipeline.  
+» Dockerized development environments for consistency and ease of use.
 
 #### Technologies used:
 

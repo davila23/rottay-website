@@ -39,18 +39,19 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Migration of a monolithic Java Application to microservices in Node.  
-➤ Support of existing applications, server, and database maintenance.  
-➤ Cloud Architecture Design with AWS.
+➤ Migrated a monolithic Java Application to micro-services in Node, resulting in improved scalability and agility.  
+➤ Maintained and supported existing applications, servers, and databases.  
+➤ Designed a scalable and cost-effective cloud architecture using AWS services.
 
 #### Realized tasks:
 
-» Integration of Here Maps.  
-» Replacement of postal codes by Polygonal Zones.  
-» Minimum path between destinations, optimal path considering traffic statistics and inclement weather.  
-» Conversion of addresses into geo-coordinates and vice-versa.  
-» Dockerize environments and database migration to AWS RDS.  
-» Cloud Architecture → IAM, AWS Cognito, AWS Route 53, AWS EC2, AWS S3, AWS CodePipeline, AWS Fargate, AWS RDB.
+» Integrated Here Maps into the application to provide location-based services to users.  
+» Replaced postal codes with Polygonal Zones to enable more accurate geographic data analysis.  
+» Optimized pathfinding algorithm to generate the minimum path between destinations, considering real-time traffic statistics and weather information.  
+» Developed a geocoding feature to convert addresses into geo-coordinates and vice versa.  
+» Dockerized the application and migrated the database to AWS RDS to improve deployment and maintenance.  
+» Designed a secure cloud architecture using AWS IAM, AWS Cognito, AWS Route 53, AWS EC2, AWS S3, AWS CodePipeline, AWS Fargate, and AWS RDB to ensure high availability, fault tolerance, and scalability.  
+» Migrate database and services from GCP to AWS.
 
 #### Technologies used:
 

@@ -31,16 +31,16 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Migration of the Employee Management System from Flex to Angular2.  
-➤ Digitization of employee documentation using OCR techniques.  
-➤ Development and Implementation of the Income System.
+➤ Migrate the Employee Management System from Flex to Angular2.  
+➤ Digitize employee documentation using OCR techniques.  
+➤ Develop and implement the Income System.
 
 #### Realized tasks:
 
-» Functional analysis, upgrade existing documentation.  
-» Architecture design, development, and unit testing.  
-» Divide a monolithic backend into Microservices.  
-» CI/CD → Automate deployments in Gitlab.
+» Conducted functional analysis and updated existing documentation.  
+» Designed the architecture, developed the solution and performed unit testing.  
+» Broke down a monolithic backend into microservices for improved efficiency and scalability.  
+» Implemented CI/CD processes to automate deployments using Gitlab.
 
 #### Technologies used:
 

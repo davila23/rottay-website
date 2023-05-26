@@ -35,15 +35,17 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Architecture design and development of the Company line.  
-➤ Coordination of tasks and deliverables with Product.
+➤ Architected and developed an automated quoting system for families and businesses.  
+➤ Coordinated tasks and deliverables to align with Product requirements.  
+➤ Designed user interface using Figma for optimal user experience.  
+➤ Implemented backend functionalities for seamless data processing and integration.
 
 #### Realized tasks:
 
-» Changes in the calculation of copayments according to the current law in Argentina.  
-» Extraction of statistical reports from associates for the BI sector.  
-» Version control, environment management, and deployment coordination.  
-» Estimation of development times, task delegation among team members, and code review.
+» Updated the calculation of copayments in compliance with the current law in Argentina.  
+» Extracted statistical reports from associates for the BI sector.  
+» Managed version control, environment, and deployment coordination.  
+» Estimated development times, delegated tasks among team members, and code review.
 
 #### Technologies used:
 

@@ -30,14 +30,15 @@ vip: false
 
 #### Functional Requirements:
 
-➤ Improve the general user experience of the customer portal. ¤ Add trading functions to the customer portal.  
-➤ Integrate with the NASDAQ trading platform.
+➤ Integrate with trading API-platforms such as Nasdaq and S&P 500.  
+➤ Develop new trading functionalities for bond and asset purchases.  
+➤ Improve the UI/UX of the website.
 
 #### Realized tasks:
 
-» Design and Development Internal pages.  
-» Prepare tests using Selenium.  
-» Include bootstrap so that the system is available on all devices.
+» Designed and developed internal web pages.  
+» Conducted unit tests using Selenium.  
+» Incorporated Bootstrap to ensure platform compatibility across various devices.
 
 #### Technologies used:
 
