@@ -24,7 +24,7 @@ const StyledText = styled.div`
     grid-template-columns: repeat(2, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 50px 0 0 0;
     overflow: hidden;
     list-style: none;
 
@@ -139,14 +139,18 @@ const About = () => {
   }, []);
 
   const skills = [
-    'JavaScript (ES6+)',
-    'Java',
+    'Node',
     'React',
-    'Node.js',
+    'Java',
+    'Angular',
+    'Golang',
     'Postgres',
+    'Solidity',
     'MongoDB',
-    'Docker',
     'AWS Services',
+    'Docker',
+    'Terraform',
+    'Kubernetes',
   ];
 
   return (
@@ -157,13 +161,14 @@ const About = () => {
         <StyledText>
           <div>
             <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
-              Hi! I'm Daniel, an Argentine Systems Engineer with over 12 years of experience working
-              in the backend, frontend, and AWS Cloud Services.
+              👋 Hi, I'm Daniel, and I am a Senior Software Engineer hailing from Argentina. I have
+              over 13 years of experience in both backend and frontend development, along with
+              expertise in Cloud Services such as AWS o GCP.
             </p>
             <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
-              I enjoy working on projects that really make a difference, building things that have
-              an impact on users. In that sense, I have performed in different roles and
-              technologies; I adapt to the team’s needs.
+              As a tech enthusiast, I am passionate about working on projects that can make a real
+              impact on users. Throughout my career, I have embraced various roles and technologies,
+              allowing me to quickly adapt to any team's needs and requirements.
             </p>
             <p style={{ fontFamily: 'Courier New', fontSize: '18px' }}>
               I am a Crypto enthusiast. So, feel free to contact me if you are interested in:{' '}
