@@ -21,7 +21,7 @@ export default function RootLayout({
           rel="stylesheet" 
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased bg-black text-white min-h-screen" suppressHydrationWarning>{children}</body>
     </html>
   )
 }
