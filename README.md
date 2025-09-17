@@ -54,45 +54,32 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in developme
 
 ## 🚀 Deployment
 
-### Vercel Deployment with GitHub Actions
+### AWS Amplify Deployment
 
-This project is configured for automatic deployment to Vercel using GitHub Actions.
+This project is configured for deployment to AWS Amplify.
 
 #### Setup Instructions:
 
-1. **Create a Vercel Account** and link your project
-2. **Get Vercel Tokens**:
-   - Go to [Vercel Dashboard](https://vercel.com/account/tokens)
-   - Create a new token
-3. **Add GitHub Secrets**:
-   - Go to your GitHub repository settings
-   - Navigate to Settings > Secrets > Actions
-   - Add the following secrets:
-     - `VERCEL_TOKEN`: Your Vercel token
-     - `VERCEL_ORG_ID`: Found in `.vercel/project.json` after running `vercel link`
-     - `VERCEL_PROJECT_ID`: Found in `.vercel/project.json` after running `vercel link`
+1. **Go to AWS Amplify Console**:
+   - Navigate to [AWS Amplify](https://console.aws.amazon.com/amplify/)
+   
+2. **Create New App**:
+   - Click "New app" → "Host web app"
+   - Choose GitHub as source provider
+   - Authorize AWS Amplify to access your GitHub account
 
-4. **Link Project Locally** (one-time setup):
-```bash
-# Install Vercel CLI
-yarn global add vercel
+3. **Connect Repository**:
+   - Select the repository
+   - Choose the `master` branch
+   - Amplify will auto-detect the `amplify.yml` configuration
 
-# Link your project
-vercel link
+4. **Deploy**:
+   - Click "Save and deploy"
+   - First deployment takes 5-10 minutes
+
+The site will be available at:
 ```
-
-5. **Automatic Deployments**:
-   - Push to `main`/`master` branch → Production deployment
-   - Push to any other branch → Preview deployment
-
-### Manual Vercel Deployment
-
-```bash
-# Deploy to production
-vercel --prod
-
-# Deploy preview
-vercel
+https://[branch-name].[app-id].amplifyapp.com
 ```
 
 ## 📁 Project Structure
@@ -109,10 +96,7 @@ rottay-website/
 │   └── ui/              # Reusable UI components
 ├── lib/                  # Utility functions
 ├── public/              # Static assets
-├── .github/             # GitHub Actions workflows
-│   └── workflows/
-│       ├── deploy.yml   # Production deployment
-│       └── preview.yml  # Preview deployment
+├── amplify.yml          # AWS Amplify configuration
 └── tailwind.config.ts   # Tailwind configuration
 ```
 
