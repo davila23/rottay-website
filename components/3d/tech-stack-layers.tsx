@@ -197,7 +197,6 @@ function GlassLayer({ layer, index, scrollProgress }: { layer: TechLayer; index:
               anchorX="center"
               outlineWidth={0.02}
               outlineColor="#000000"
-              opacity={hovered ? 1 : 0.9}
             >
               {tech}
             </Text>
