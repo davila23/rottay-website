@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -33,6 +33,7 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
+    "@aws-amplify/adapter-nextjs": "^1.6.9",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "^20",
