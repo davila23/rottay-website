@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { OrganizationSchema, WebSiteSchema } from '@/components/seo/schema-markup'
+import { AIAssistant } from '@/components/ui/ai-assistant'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased bg-black text-white min-h-screen" suppressHydrationWarning>
         {children}
+        <AIAssistant />
       </body>
     </html>
   )

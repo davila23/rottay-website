@@ -4,7 +4,6 @@ import { Header, Footer } from '@/components/layout'
 import { Hero, Products, TechStack } from '@/components/sections'
 import { ContactForm } from '@/components/sections/contact/ContactForm'
 import { PlatformMetrics } from '@/components/sections/platform-metrics'
-import { Chatbot } from '@/components/ui/chatbot'
 import { CookieBanner } from '@/components/ui/cookie-banner'
 import { Parallax } from '@/components/ui/parallax'
 import { Reveal } from '@/components/ui/reveal'
@@ -40,7 +39,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <Chatbot />
       <CookieBanner />
       <ToastContainer />
     </>
