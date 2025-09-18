@@ -4,8 +4,8 @@ export function OrganizationSchema() {
     "@type": "Organization",
     "name": "ROTTAY",
     "alternateName": "ROTTAY AI",
-    "url": "https://rottay.ai",
-    "logo": "https://rottay.ai/logo.png",
+    "url": "https://rottay.com",
+    "logo": "https://rottay.com/logo.png",
     "sameAs": [
       "https://github.com/rottay",
       "https://linkedin.com/company/rottay",
@@ -15,7 +15,7 @@ export function OrganizationSchema() {
       "@type": "ContactPoint",
       "telephone": "+1-305-555-0100",
       "contactType": "sales",
-      "email": "hello@rottay.ai",
+      "email": "hello@rottay.com",
       "areaServed": ["US", "MX", "BR", "AR", "CO", "CL", "PE"],
       "availableLanguage": ["English", "Spanish", "Portuguese"]
     },
@@ -81,7 +81,7 @@ export function JobPostingSchema({ position }: { position: any }) {
     "hiringOrganization": {
       "@type": "Organization",
       "name": "ROTTAY",
-      "sameAs": "https://rottay.ai"
+      "sameAs": "https://rottay.com"
     },
     "jobLocation": {
       "@type": "Place",
@@ -123,14 +123,14 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://rottay.ai",
+    "url": "https://rottay.com",
     "name": "ROTTAY",
     "description": "AI and blockchain solutions for Latin American markets",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://rottay.ai/search?q={search_term_string}"
+        "urlTemplate": "https://rottay.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }

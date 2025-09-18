@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://rottay.ai',
+    url: 'https://rottay.com',
     siteName: 'Rottay',
     title: 'Rottay | AI & Blockchain Solutions for Latin America',
     description: 'Build and deploy enterprise AI applications with our powerful infrastructure designed for LATAM markets',
     images: [
       {
-        url: 'https://rottay.ai/og-image.png',
+        url: 'https://rottay.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Rottay - AI & Blockchain Solutions',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'Rottay | AI & Blockchain Solutions',
     description: 'Build and deploy enterprise AI applications with our powerful infrastructure',
     creator: '@rottay',
-    images: ['https://rottay.ai/og-image.png'],
+    images: ['https://rottay.com/og-image.png'],
   },
 }
 

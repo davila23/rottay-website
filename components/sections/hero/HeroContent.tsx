@@ -51,7 +51,7 @@ export function HeroContent() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <Link
-            href="https://docs.rottay.ai"
+            href="https://docs.rottay.com"
             className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-transparent border-2 border-white rounded hover:bg-white hover:text-black transition-colors"
           >
             API Documentation

@@ -79,7 +79,7 @@ See our AI in action.
 
 ### 6. Connect
 ```
-GitHub | LinkedIn | hello@rottay.ai
+GitHub | LinkedIn | hello@rottay.com
 Miami Beach, FL
 ```
 

@@ -3,6 +3,7 @@
 import { Header, Footer } from '@/components/layout'
 import { Hero, Products, TechStack } from '@/components/sections'
 import { ContactForm } from '@/components/sections/contact/ContactForm'
+import { PlatformMetrics } from '@/components/sections/platform-metrics'
 import { Chatbot } from '@/components/ui/chatbot'
 import { CookieBanner } from '@/components/ui/cookie-banner'
 import { Parallax } from '@/components/ui/parallax'
@@ -25,6 +26,9 @@ export default function Home() {
           <Reveal width="100%">
             <Products />
           </Reveal>
+        </section>
+        <section aria-label="Platform metrics section" className="relative z-10">
+          <PlatformMetrics />
         </section>
         <section aria-label="Tech stack section" className="section-gradient-2 relative z-10">
           <Parallax>

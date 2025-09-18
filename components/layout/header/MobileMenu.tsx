@@ -1,26 +1,51 @@
 "use client"
 
 import Link from 'next/link'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, ExternalLink } from 'lucide-react'
+import { 
+  X, 
+  ExternalLink, 
+  ChevronRight,
+  Users,
+  CreditCard,
+  TrendingUp,
+  DollarSign,
+  Phone,
+  Workflow,
+  Cloud,
+  Code,
+  Rocket,
+  Building,
+  Info,
+  BookOpen,
+  Briefcase,
+  Github,
+  Mail,
+  ArrowRight,
+  Sparkles,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react'
 
 interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
 }
 
-const mobileLinks = [
-  { name: 'Products', href: '/products' },
-  { name: 'BitHire.ai', href: '/products/bithire', isSubItem: true },
-  { name: 'TicketGenius', href: '/products/ticketgenius', isSubItem: true },
-  { name: 'MarketFlow', href: '/products/marketflow', isSubItem: true },
-  { name: 'DollarEx', href: '/products/dollarex', isSubItem: true },
-  { name: 'Company', href: '/company' },
-  { name: 'GitHub', href: 'https://github.com/rottay', external: true },
-  { name: 'Contact', href: '/contact' }
-]
-
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const [activeView, setActiveView] = useState<'main' | 'products' | 'services'>('main')
+
+  const handleBack = () => {
+    setActiveView('main')
+  }
+
+  const handleClose = () => {
+    setActiveView('main')
+    onClose()
+  }
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -30,8 +55,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
-            onClick={onClose}
+            className="fixed inset-0 bg-black/80 backdrop-blur-md z-40"
+            onClick={handleClose}
           />
           
           {/* Menu */}
@@ -39,49 +64,340 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-80 bg-white shadow-2xl z-50 md:hidden"
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            className="fixed inset-y-0 right-0 w-full max-w-[100vw] sm:max-w-md bg-white z-50 overflow-hidden"
           >
-            <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <span className="font-bold text-xl">Menu</span>
-              <button
-                onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            
-            <nav className="p-6">
-              <div className="space-y-1">
-                {mobileLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    target={link.external ? '_blank' : '_self'}
-                    rel={link.external ? 'noopener noreferrer' : undefined}
-                    onClick={onClose}
-                    className={`flex items-center justify-between py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors ${
-                      link.isSubItem ? 'ml-4 text-gray-600 text-sm' : 'text-black font-medium'
-                    }`}
-                  >
-                    <span>{link.name}</span>
-                    {link.external && <ExternalLink className="w-4 h-4" />}
-                  </Link>
-                ))}
-              </div>
-              
-              {/* CTA in mobile */}
-              <div className="mt-8 pt-6 border-t border-gray-100">
-                <Link
-                  href="/contact"
-                  onClick={onClose}
-                  className="block w-full py-3 px-4 bg-black text-white text-center rounded-lg hover:bg-gray-800 transition-colors font-medium"
+            {/* Main View */}
+            <AnimatePresence mode="wait">
+              {activeView === 'main' && (
+                <motion.div
+                  key="main"
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -300, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full flex flex-col"
                 >
-                  Get Started
-                </Link>
-              </div>
-            </nav>
+                  {/* Header */}
+                  <div className="flex items-center justify-between p-5 border-b border-gray-100">
+                    <motion.div 
+                      initial={{ scale: 0.9 }}
+                      animate={{ scale: 1 }}
+                      className="flex items-center gap-2"
+                    >
+                      <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">R</span>
+                      </div>
+                      <span className="font-bold text-xl">ROTTAY</span>
+                    </motion.div>
+                    <button
+                      onClick={handleClose}
+                      className="p-2 hover:bg-gray-100 rounded-xl transition-colors"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+
+                  {/* Main Navigation */}
+                  <div className="flex-1 overflow-y-auto">
+                    {/* Solutions Section */}
+                    <div className="p-5">
+                      <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Solutions</h3>
+                      
+                      {/* Products Card */}
+                      <button
+                        onClick={() => setActiveView('products')}
+                        className="w-full mb-3 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100 hover:border-blue-200 transition-all group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2.5 bg-white rounded-xl shadow-sm">
+                              <Sparkles className="w-5 h-5 text-blue-600" />
+                            </div>
+                            <div className="text-left">
+                              <div className="font-semibold text-gray-900">Our Products</div>
+                              <div className="text-xs text-gray-500">4 solutions available</div>
+                            </div>
+                          </div>
+                          <ChevronRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </button>
+
+                      {/* Services Card */}
+                      <button
+                        onClick={() => setActiveView('services')}
+                        className="w-full mb-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-100 hover:border-green-200 transition-all group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2.5 bg-white rounded-xl shadow-sm">
+                              <Zap className="w-5 h-5 text-green-600" />
+                            </div>
+                            <div className="text-left">
+                              <div className="font-semibold text-gray-900">Our Services</div>
+                              <div className="text-xs text-gray-500">Enterprise solutions</div>
+                            </div>
+                          </div>
+                          <ChevronRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </button>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="px-5 pb-5">
+                      <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Company</h3>
+                      <div className="space-y-1">
+                        <Link
+                          href="/about"
+                          onClick={handleClose}
+                          className="flex items-center justify-between py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <Info className="w-5 h-5 text-gray-500" />
+                            <span className="font-medium">About</span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+
+                        <Link
+                          href="/case-studies"
+                          onClick={handleClose}
+                          className="flex items-center justify-between py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <BookOpen className="w-5 h-5 text-gray-500" />
+                            <span className="font-medium">Case Studies</span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+
+                        <Link
+                          href="/careers"
+                          onClick={handleClose}
+                          className="flex items-center justify-between py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <Briefcase className="w-5 h-5 text-gray-500" />
+                            <span className="font-medium">Careers</span>
+                            <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full font-medium">Hiring</span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+
+                        <Link
+                          href="https://github.com/rottay"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={handleClose}
+                          className="flex items-center justify-between py-3 px-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <Github className="w-5 h-5 text-gray-500" />
+                            <span className="font-medium">GitHub</span>
+                          </div>
+                          <ExternalLink className="w-4 h-4 text-gray-400" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom CTA */}
+                  <div className="p-5 border-t border-gray-100 bg-gradient-to-t from-gray-50 to-white">
+                    <Link
+                      href="/contact"
+                      onClick={handleClose}
+                      className="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-black text-white rounded-2xl hover:bg-gray-800 transition-all font-medium shadow-lg shadow-black/10"
+                    >
+                      <Mail className="w-5 h-5" />
+                      <span>Get Started</span>
+                    </Link>
+                    <p className="text-xs text-gray-500 text-center mt-3">
+                      Free 30-minute consultation
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Products View */}
+              {activeView === 'products' && (
+                <motion.div
+                  key="products"
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 300, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full flex flex-col"
+                >
+                  {/* Header */}
+                  <div className="flex items-center gap-3 p-5 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-purple-50">
+                    <button
+                      onClick={handleBack}
+                      className="p-2 hover:bg-white/50 rounded-xl transition-colors"
+                    >
+                      <ChevronRight className="w-5 h-5 rotate-180" />
+                    </button>
+                    <div>
+                      <h2 className="font-bold text-lg">Our Products</h2>
+                      <p className="text-xs text-gray-600">Innovative solutions for modern businesses</p>
+                    </div>
+                  </div>
+
+                  {/* Products List */}
+                  <div className="flex-1 overflow-y-auto p-5">
+                    <div className="space-y-3">
+                      {/* BitHire.ai */}
+                      <Link
+                        href="https://bithire.ai"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={handleClose}
+                        className="block p-4 bg-white rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all"
+                      >
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl">
+                            <Users className="w-6 h-6 text-white" />
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Live</span>
+                            <ExternalLink className="w-4 h-4 text-gray-400" />
+                          </div>
+                        </div>
+                        <h3 className="font-bold text-lg mb-1">BitHire.ai</h3>
+                        <p className="text-sm text-gray-600 mb-3">AI-powered recruitment platform that revolutionizes talent acquisition</p>
+                        <div className="flex items-center gap-2 text-blue-600 font-medium">
+                          <span className="text-sm">Visit website</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </Link>
+
+                      {/* TicketGenius */}
+                      <div className="block p-4 bg-white rounded-2xl border border-gray-200">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl">
+                            <CreditCard className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">Beta</span>
+                        </div>
+                        <h3 className="font-bold text-lg mb-1">TicketGenius</h3>
+                        <p className="text-sm text-gray-600">Smart ticketing system with AI-powered customer support</p>
+                      </div>
+
+                      {/* MarketFlow */}
+                      <div className="block p-4 bg-white rounded-2xl border border-gray-200">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="p-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl">
+                            <TrendingUp className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Dev</span>
+                        </div>
+                        <h3 className="font-bold text-lg mb-1">MarketFlow</h3>
+                        <p className="text-sm text-gray-600">Real-time market intelligence and analytics platform</p>
+                      </div>
+
+                      {/* DollarEx */}
+                      <div className="block p-4 bg-white rounded-2xl border border-gray-200">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="p-3 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl">
+                            <DollarSign className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium">2025</span>
+                        </div>
+                        <h3 className="font-bold text-lg mb-1">DollarEx</h3>
+                        <p className="text-sm text-gray-600">Revolutionary cross-border payment solution</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Services View */}
+              {activeView === 'services' && (
+                <motion.div
+                  key="services"
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 300, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full flex flex-col"
+                >
+                  {/* Header */}
+                  <div className="flex items-center gap-3 p-5 border-b border-gray-100 bg-gradient-to-r from-green-50 to-emerald-50">
+                    <button
+                      onClick={handleBack}
+                      className="p-2 hover:bg-white/50 rounded-xl transition-colors"
+                    >
+                      <ChevronRight className="w-5 h-5 rotate-180" />
+                    </button>
+                    <div>
+                      <h2 className="font-bold text-lg">Our Services</h2>
+                      <p className="text-xs text-gray-600">Enterprise-grade solutions</p>
+                    </div>
+                  </div>
+
+                  {/* Services Grid */}
+                  <div className="flex-1 overflow-y-auto p-5">
+                    <div className="grid grid-cols-2 gap-3">
+                      {/* Voice AI */}
+                      <div className="p-4 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl border border-indigo-200">
+                        <div className="p-3 bg-white rounded-xl mb-3 inline-block">
+                          <Phone className="w-6 h-6 text-indigo-600" />
+                        </div>
+                        <h4 className="font-semibold mb-1">Voice AI</h4>
+                        <p className="text-xs text-gray-600">Real-time transcription</p>
+                      </div>
+
+                      {/* Workflow */}
+                      <div className="p-4 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl border border-pink-200">
+                        <div className="p-3 bg-white rounded-xl mb-3 inline-block">
+                          <Workflow className="w-6 h-6 text-pink-600" />
+                        </div>
+                        <h4 className="font-semibold mb-1">Automation</h4>
+                        <p className="text-xs text-gray-600">No-code builder</p>
+                      </div>
+
+                      {/* Cloud */}
+                      <div className="p-4 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl border border-cyan-200">
+                        <div className="p-3 bg-white rounded-xl mb-3 inline-block">
+                          <Cloud className="w-6 h-6 text-cyan-600" />
+                        </div>
+                        <h4 className="font-semibold mb-1">Cloud</h4>
+                        <p className="text-xs text-gray-600">Multi-cloud solutions</p>
+                      </div>
+
+                      {/* Custom */}
+                      <Link
+                        href="/contact"
+                        onClick={handleClose}
+                        className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border border-orange-200"
+                      >
+                        <div className="p-3 bg-white rounded-xl mb-3 inline-block">
+                          <Code className="w-6 h-6 text-orange-600" />
+                        </div>
+                        <h4 className="font-semibold mb-1">Custom</h4>
+                        <p className="text-xs text-gray-600">Tailored solutions</p>
+                      </Link>
+                    </div>
+
+                    {/* Industries Section */}
+                    <div className="mt-6">
+                      <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Industries We Serve</h3>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="p-4 bg-white rounded-2xl border border-gray-200">
+                          <Rocket className="w-8 h-8 text-red-500 mb-2" />
+                          <h4 className="font-semibold">Startups</h4>
+                          <p className="text-xs text-gray-600 mt-1">Launch faster with our tech</p>
+                        </div>
+                        <div className="p-4 bg-white rounded-2xl border border-gray-200">
+                          <Building className="w-8 h-8 text-gray-600 mb-2" />
+                          <h4 className="font-semibold">Enterprise</h4>
+                          <p className="text-xs text-gray-600 mt-1">Scale with confidence</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </>
       )}

@@ -193,7 +193,7 @@ export function ContactForm() {
                 <div className="space-y-2">
                   <p className="text-gray-300 text-sm">
                     <Mail className="inline w-4 h-4 mr-2 text-gray-500" />
-                    hello@rottay.ai
+                    hello@rottay.com
                   </p>
                 </div>
               </div>

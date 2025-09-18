@@ -129,7 +129,7 @@ This project is proprietary and confidential. All rights reserved by ROTTAY.
 
 ## 📧 Contact
 
-For inquiries, please contact: hello@rottay.ai
+For inquiries, please contact: hello@rottay.com
 
 ---
 

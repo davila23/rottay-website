@@ -12,14 +12,14 @@ export default function CaseStudiesPage() {
       client: 'Major US Telecommunications Provider',
       industry: 'Telecommunications',
       product: 'Voice AI Platform',
-      title: 'Automating 70% of Tier-1 Support Calls',
+      title: 'Automating Tier-1 Support at Scale',
       challenge: 'Handling 2M+ monthly support calls with average wait times exceeding 15 minutes during peak hours',
       solution: 'Deployed voice AI agents with custom training on 500K historical call transcripts and real-time sentiment analysis',
       results: [
-        { metric: '70%', label: 'Call deflection rate' },
-        { metric: '3.2min', label: 'Average resolution time' },
-        { metric: '$18M', label: 'Annual operational savings' },
-        { metric: '4.6/5', label: 'Customer satisfaction score' }
+        { metric: 'Automated', label: 'Tier-1 support calls' },
+        { metric: 'Faster', label: 'Resolution time' },
+        { metric: 'Reduced', label: 'Operational costs' },
+        { metric: 'Improved', label: 'Customer satisfaction' }
       ],
       testimonial: 'Rottay\'s voice AI handles complex multi-turn conversations better than any solution we evaluated. Implementation took just 6 weeks.',
       testimonialAuthor: 'SVP of Customer Experience'
@@ -29,14 +29,14 @@ export default function CaseStudiesPage() {
       client: 'Multi-State Healthcare Network',
       industry: 'Healthcare',
       product: 'Voice Automation Suite',
-      title: 'HIPAA-Compliant Voice Scheduling System',
-      challenge: 'Managing 500K+ appointment requests monthly across 200 facilities with 40% no-show rate',
+      title: 'HIPAA-Compliant Voice Scheduling',
+      challenge: 'Managing high volume appointment requests across multiple facilities with significant no-show rates',
       solution: 'Integrated voice AI with Epic/Cerner EMR systems for automated scheduling, reminders, and rescheduling',
       results: [
-        { metric: '85%', label: 'Automated scheduling rate' },
-        { metric: '22%', label: 'Reduction in no-shows' },
-        { metric: '300K', label: 'Staff hours saved annually' },
-        { metric: '100%', label: 'HIPAA compliance maintained' }
+        { metric: 'Automated', label: 'Scheduling workflow' },
+        { metric: 'Reduced', label: 'No-show rates' },
+        { metric: 'Saved', label: 'Staff hours' },
+        { metric: 'HIPAA', label: 'Fully compliant' }
       ],
       testimonial: 'The platform handles complex scheduling logic across multiple providers and locations seamlessly. ROI achieved in 4 months.',
       testimonialAuthor: 'Chief Medical Officer'
@@ -46,14 +46,14 @@ export default function CaseStudiesPage() {
       client: 'Digital Banking Platform',
       industry: 'Financial Services',
       product: 'Voice Biometric Authentication',
-      title: 'Voice-Based KYC Reducing Fraud by 94%',
-      challenge: 'Account takeover fraud costing $2M+ annually with traditional authentication methods',
+      title: 'Voice Biometric Authentication',
+      challenge: 'Account takeover fraud with traditional authentication methods',
       solution: 'Implemented voice biometric authentication with liveness detection and continuous verification',
       results: [
-        { metric: '94%', label: 'Fraud reduction' },
-        { metric: '8sec', label: 'Average authentication time' },
-        { metric: '99.8%', label: 'Accuracy rate' },
-        { metric: '$1.8M', label: 'Annual fraud losses prevented' }
+        { metric: 'Reduced', label: 'Fraud incidents' },
+        { metric: 'Seconds', label: 'Authentication time' },
+        { metric: 'High', label: 'Accuracy rate' },
+        { metric: 'Protected', label: 'Customer accounts' }
       ],
       testimonial: 'Voice biometrics eliminated password-related tickets while significantly improving security. Best infrastructure decision we made.',
       testimonialAuthor: 'CISO'
@@ -67,10 +67,10 @@ export default function CaseStudiesPage() {
       challenge: 'Coordinating 5,000+ daily deliveries across 300 drivers with manual dispatch processes',
       solution: 'Voice-enabled dispatch system with real-time route optimization and driver communication',
       results: [
-        { metric: '35%', label: 'Increase in delivery capacity' },
-        { metric: '28%', label: 'Fuel cost reduction' },
-        { metric: '45min', label: 'Average delivery time saved' },
-        { metric: '98.5%', label: 'On-time delivery rate' }
+        { metric: 'Increased', label: 'Delivery capacity' },
+        { metric: 'Optimized', label: 'Fuel consumption' },
+        { metric: 'Faster', label: 'Delivery times' },
+        { metric: 'Improved', label: 'On-time delivery' }
       ],
       testimonial: 'The voice interface allows our dispatchers to manage 3x more drivers efficiently. Integration with our TMS was seamless.',
       testimonialAuthor: 'VP of Operations'

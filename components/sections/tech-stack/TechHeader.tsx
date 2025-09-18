@@ -18,15 +18,20 @@ export function TechHeader() {
         viewport={{ once: true }}
         className="inline-block px-4 py-1 mb-4 text-sm font-medium text-gray-400 bg-gray-900 rounded-full"
       >
-        Technology Stack
+        Our Infrastructure
       </motion.span>
       
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-        Built With Best-in-Class Tech
+        Enterprise Architecture
+        <span className="block text-2xl md:text-3xl mt-2 text-gray-400 font-normal">
+          Powering Voice AI at Scale
+        </span>
       </h2>
       
-      <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-        We leverage cutting-edge technologies to build scalable, performant, and secure applications
+      <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+        Built on battle-tested technologies trusted by Fortune 500 companies. 
+        Our platform handles millions of voice interactions with sub-second latency 
+        across multiple cloud regions.
       </p>
     </motion.div>
   )

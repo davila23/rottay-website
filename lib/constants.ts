@@ -7,7 +7,7 @@ export const companyInfo = {
     regions: ['LATAM', 'North America', 'Europe']
   },
   contact: {
-    email: 'hello@rottay.ai',
+    email: 'hello@rottay.com',
     phone: '+1 (305) 555-0100'
   }
 }

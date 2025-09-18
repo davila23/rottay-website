@@ -12,19 +12,11 @@ interface Message {
 }
 
 const quickResponses = [
-  "Tell me about your products",
-  "How can I integrate your API?",
-  "What are your pricing plans?",
+  "Tell me about Voice AI",
+  "How does the API work?",
+  "What's your pricing?",
   "Schedule a demo"
 ]
-
-const botResponses: { [key: string]: string } = {
-  "tell me about your products": "We offer 4 main products:\n\n• **BitHire.ai** - AI-powered recruitment platform\n• **Notarix** - Digital notary system on blockchain\n• **VozIA** - AI voice synthesis platform\n• **PayMerchant** - Crypto payment infrastructure\n\nWhich one would you like to know more about?",
-  "how can i integrate your api": "Our APIs are designed for easy integration:\n\n1. Sign up for an API key\n2. Check our documentation\n3. Use our SDKs (Python, Node.js, Go)\n4. Test in sandbox environment\n5. Deploy to production\n\nWould you like to see code examples?",
-  "what are your pricing plans": "We offer flexible pricing:\n\n• **Starter** - Free tier for testing\n• **Growth** - $299/month for small teams\n• **Enterprise** - Custom pricing\n\nAll plans include API access and basic support. Contact us for a custom quote!",
-  "schedule a demo": "I'd be happy to help you schedule a demo! Please visit our contact page or click the 'Schedule Meeting' button to book a time with our team.",
-  "default": "I'm here to help! You can ask me about:\n• Our products and services\n• API integration\n• Pricing information\n• Technical documentation\n\nHow can I assist you today?"
-}
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -48,7 +40,7 @@ export function Chatbot() {
     scrollToBottom()
   }, [messages])
 
-  const handleSend = (text?: string) => {
+  const handleSend = async (text?: string) => {
     const messageText = text || inputValue.trim()
     if (!messageText) return
 
@@ -63,28 +55,51 @@ export function Chatbot() {
     setInputValue('')
     setIsTyping(true)
 
-    // Simulate bot response
-    setTimeout(() => {
-      const lowerText = messageText.toLowerCase()
-      let response = botResponses.default
-      
-      for (const key in botResponses) {
-        if (lowerText.includes(key)) {
-          response = botResponses[key]
-          break
-        }
+    try {
+      // Call the API route
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: messageText,
+          history: messages.slice(-10).map(m => ({
+            role: m.sender === 'user' ? 'user' : 'assistant',
+            content: m.text
+          }))
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to get response')
       }
+
+      const data = await response.json()
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: response,
+        text: data.message,
         sender: 'bot',
         timestamp: new Date()
       }
 
       setMessages(prev => [...prev, botMessage])
+    } catch (error) {
+      console.error('Chat error:', error)
+      
+      // Fallback response
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I apologize, but I'm having trouble connecting. Please try again or contact us directly at hello@rottay.com",
+        sender: 'bot',
+        timestamp: new Date()
+      }
+      
+      setMessages(prev => [...prev, botMessage])
+    } finally {
       setIsTyping(false)
-    }, 1000)
+    }
   }
 
   return (

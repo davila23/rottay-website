@@ -304,7 +304,7 @@ export function OpenPositions() {
                             <ChevronRight className="ml-2 w-4 h-4" />
                           </Link>
                           <a
-                            href={`mailto:careers@rottay.ai?subject=Application for ${position.title}`}
+                            href={`mailto:careers@rottay.com?subject=Application for ${position.title}`}
                             className="inline-flex items-center justify-center px-8 py-3 bg-transparent border border-gray-700 text-white font-medium rounded-lg hover:border-gray-500 transition-colors"
                           >
                             Email us directly

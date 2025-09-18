@@ -4,13 +4,14 @@ import { Header, Footer } from '@/components/layout'
 import { motion } from 'framer-motion'
 import { Building2, Users, Target, Rocket, Shield, Globe, Award, Briefcase } from 'lucide-react'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
+import { SimpleAnimatedIcon } from '@/components/3d/simple-animated-icons'
 
 export default function AboutPage() {
   const stats = [
-    { label: 'Founded', value: 2019, isNumber: true },
-    { label: 'Active Projects', value: 12, suffix: '+', isNumber: true },
-    { label: 'Team Members', value: 8, isNumber: true },
-    { label: 'Client Retention', value: 95, suffix: '%', isNumber: true },
+    { label: 'Voice AI', value: 'Core Focus', isNumber: false, icon: 'voice' },
+    { label: 'Cloud Native', value: 'Architecture', isNumber: false, icon: 'cloud' },
+    { label: 'Multi-Region', value: 'Deployment', isNumber: false, icon: 'globe' },
+    { label: 'Enterprise', value: 'Ready', isNumber: false, icon: 'check' },
   ]
 
   const values = [
@@ -40,23 +41,10 @@ export default function AboutPage() {
     {
       name: 'Daniel Avila',
       role: 'Founder & CEO',
-      bio: 'Previously ML Engineer at Meta. 8+ years building voice AI and automation systems',
-      linkedin: 'https://www.linkedin.com/in/avila-daniel/'
-    },
-    {
-      name: 'Santiago Ramirez',
-      role: 'CTO',
-      bio: 'Former Principal Engineer at MercadoLibre. Expert in distributed systems and real-time processing'
-    },
-    {
-      name: 'Maria Fernández',
-      role: 'VP of Engineering',
-      bio: 'Ex-Google Cloud. Specialized in Kubernetes orchestration and multi-cloud deployments'
-    },
-    {
-      name: 'Carlos Chen',
-      role: 'Head of AI Research',
-      bio: 'PhD Stanford. Published 15+ papers on conversational AI and natural language processing'
+      bio: 'Systems Engineer with 15+ years of experience. AI-first approach, AWS Certified Solutions Architect, specialized in voice AI and cloud infrastructure',
+      linkedin: 'https://www.linkedin.com/in/avila-daniel/',
+      certifications: ['AWS Solutions Architect', 'AWS Developer', 'Google Cloud Professional'],
+      expertise: ['Voice AI', 'Cloud Architecture', 'Automation', 'Machine Learning']
     }
   ]
 
@@ -97,12 +85,12 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  <AnimatedCounter 
-                    value={stat.value} 
-                    suffix={stat.suffix || ''} 
-                    duration={2}
-                  />
+                {/* 3D Icon */}
+                <div className="w-20 h-20 mx-auto mb-4">
+                  <SimpleAnimatedIcon type={stat.icon as 'voice' | 'cloud' | 'globe' | 'check'} />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.value}
                 </div>
                 <div className="text-gray-500 text-sm uppercase tracking-wider">
                   {stat.label}
@@ -129,14 +117,24 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                To make enterprise-grade AI accessible through practical, well-architected solutions. 
-                We focus on voice automation, workflow optimization, and cloud infrastructure that 
-                delivers measurable business value from day one.
+                We believe every transformative idea deserves to become reality. Our mission is to bridge 
+                the gap between vision and execution, turning ambitious concepts into production-ready 
+                solutions that actually work. Through cutting-edge AI, full-stack engineering excellence, 
+                and cloud-native architecture, we make the impossible possible.
+              </p>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                In a world where 90% of digital transformations fail, we take a different approach. 
+                We don't just build technology—we architect digital ecosystems that evolve with your business. 
+                From voice AI that understands context and emotion, to workflows that adapt and learn, 
+                to infrastructure that scales seamlessly across continents, we craft solutions that feel 
+                like magic but are grounded in engineering rigor.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Our team combines deep technical expertise with real-world implementation experience, 
-                ensuring every solution we deliver is production-ready, scalable, and aligned with 
-                industry best practices for security and compliance.
+                Our expertise spans the entire stack: from bare metal to the cloud, from database optimization 
+                to real-time AI inference, from security protocols to user experience. We've spent years 
+                mastering the art of turning complex technical challenges into elegant, maintainable solutions. 
+                When you work with us, you're not just getting developers—you're partnering with architects 
+                of digital transformation who understand that great technology should empower, not complicate.
               </p>
             </div>
             <div className="relative">
@@ -149,8 +147,107 @@ export default function AboutPage() {
                   }} />
                 </div>
                 <div className="h-full flex items-center justify-center relative z-10">
-                  <Building2 className="w-32 h-32 text-gray-700" />
+                  <div className="w-full h-full max-w-[250px] max-h-[250px]">
+                    <SimpleAnimatedIcon type="building" />
+                  </div>
                 </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-24 bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Rocket className="w-8 h-8 text-gray-400 mr-3" />
+              <h2 className="text-3xl font-bold text-white">Our Vision</h2>
+            </div>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              We envision a future where AI isn't just a buzzword or a tool for tech giants—it's a 
+              fundamental enabler that empowers every business to operate at its full potential.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6">
+                <h3 className="text-white font-semibold mb-3">Ideas to Reality</h3>
+                <p className="text-gray-500 text-sm">
+                  Transform concepts from whiteboard sketches to production systems that serve millions.
+                </p>
+              </div>
+              <div className="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6">
+                <h3 className="text-white font-semibold mb-3">Human-Centric AI</h3>
+                <p className="text-gray-500 text-sm">
+                  Build technology that enhances human capabilities rather than replacing them.
+                </p>
+              </div>
+              <div className="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-lg p-6">
+                <h3 className="text-white font-semibold mb-3">Global Impact</h3>
+                <p className="text-gray-500 text-sm">
+                  Create solutions that transcend borders and make advanced technology accessible worldwide.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-24 bg-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Philosophy</h2>
+            <div className="space-y-6 text-gray-400">
+              <div className="bg-gray-950/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+                <h3 className="text-xl font-semibold text-white mb-4">Build for the Real World</h3>
+                <p className="leading-relaxed">
+                  Perfect code that never ships helps no one. We believe in pragmatic engineering—building 
+                  robust solutions that work today while being flexible enough for tomorrow. Every line of 
+                  code we write, every architecture decision we make, is guided by real-world constraints 
+                  and actual user needs, not theoretical perfection.
+                </p>
+              </div>
+              
+              <div className="bg-gray-950/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+                <h3 className="text-xl font-semibold text-white mb-4">AI as a Tool, Not a Replacement</h3>
+                <p className="leading-relaxed">
+                  We see AI as humanity's most powerful amplifier. Our voice AI doesn't replace human 
+                  connection—it handles repetitive tasks so humans can focus on what matters. Our automation 
+                  doesn't eliminate jobs—it eliminates tedium. We build technology that respects both human 
+                  intelligence and artificial intelligence, creating synergy rather than competition.
+                </p>
+              </div>
+              
+              <div className="bg-gray-950/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+                <h3 className="text-xl font-semibold text-white mb-4">Security is Not Optional</h3>
+                <p className="leading-relaxed">
+                  In an era of data breaches and AI hallucinations, we treat security and reliability as 
+                  fundamental requirements, not features. Every system we build assumes it will be attacked, 
+                  every AI model we deploy includes safeguards, and every piece of data we handle is treated 
+                  as if it were our own. Trust is earned in years and lost in seconds—we never forget that.
+                </p>
+              </div>
+              
+              <div className="bg-gray-950/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8">
+                <h3 className="text-xl font-semibold text-white mb-4">Complexity Made Simple</h3>
+                <p className="leading-relaxed">
+                  The best technology is invisible. We take pride in abstracting away complexity, creating 
+                  interfaces so intuitive that users forget they're interacting with sophisticated AI systems. 
+                  Whether it's a voice command, an API call, or a workflow automation, we believe powerful 
+                  technology should feel effortless to use.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -206,36 +303,74 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Leadership Team</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Leadership</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Visionaries and experts leading the charge in AI and blockchain innovation
+              Building the future of voice AI and automation
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
+          <div className="max-w-3xl mx-auto">
+            {team.map((member) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                transition={{ duration: 0.6 }}
+                className="bg-gradient-to-b from-gray-950 to-black rounded-xl border border-gray-800 p-8"
               >
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden group">
-                  {member.linkedin ? (
+                <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden group flex-shrink-0">
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                      <Users className="w-12 h-12 text-gray-600 group-hover:text-gray-400 transition-colors" />
+                      <Users className="w-16 h-16 text-gray-600 group-hover:text-gray-400 transition-colors" />
                     </a>
-                  ) : (
-                    <Users className="w-12 h-12 text-gray-600" />
-                  )}
+                  </div>
+                  
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl font-semibold text-white mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-lg text-gray-400 mb-3">{member.role}</p>
+                    <p className="text-gray-500 mb-6">{member.bio}</p>
+                    
+                    {/* Certifications */}
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Certifications</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.certifications.map((cert) => (
+                          <span key={cert} className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full">
+                            {cert}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Expertise */}
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Core Expertise</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.expertise.map((skill) => (
+                          <span key={skill} className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* LinkedIn */}
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-400 hover:text-white transition-colors"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                      Connect on LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-400 mb-2">{member.role}</p>
-                <p className="text-xs text-gray-600">{member.bio}</p>
               </motion.div>
             ))}
           </div>
