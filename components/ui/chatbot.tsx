@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle, X, Send, Bot, User, Loader } from 'lucide-react'
+import { MessageCircle, X, Send, Bot, User, Loader, Minimize2 } from 'lucide-react'
 
 interface Message {
   id: string
@@ -20,6 +20,8 @@ const quickResponses = [
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMinimized, setIsMinimized] = useState(false)
+  const [hasInteracted, setHasInteracted] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -30,15 +32,50 @@ export function Chatbot() {
   ])
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   useEffect(() => {
     scrollToBottom()
   }, [messages])
+
+  // Prevent chat from reopening automatically
+  useEffect(() => {
+    if (hasInteracted && !isOpen) {
+      // User has closed the chat, don't auto-reopen
+      return
+    }
+  }, [hasInteracted, isOpen])
+
+  const handleOpen = () => {
+    setIsOpen(true)
+    setIsMinimized(false)
+    setHasInteracted(true)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+    setIsMinimized(false)
+    setHasInteracted(true)
+  }
+
+  const handleMinimize = () => {
+    setIsMinimized(true)
+  }
 
   const handleSend = async (text?: string) => {
     const messageText = text || inputValue.trim()
@@ -105,32 +142,54 @@ export function Chatbot() {
   return (
     <>
       {/* Chat Button */}
-      <AnimatePresence>
-        {!isOpen && (
+      <AnimatePresence mode="wait">
+        {!isOpen && !isMinimized && (
           <motion.button
+            key="chat-button"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: isMobile ? 1 : 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-white text-black rounded-full shadow-2xl flex items-center justify-center hover:bg-gray-200 transition-colors"
+            onClick={handleOpen}
+            className={`fixed z-40 bg-white text-black rounded-full shadow-2xl flex items-center justify-center hover:bg-gray-200 transition-colors ${
+              isMobile ? 'bottom-4 right-4 w-12 h-12' : 'bottom-6 right-6 w-14 h-14'
+            }`}
             aria-label="Open chat"
           >
-            <MessageCircle className="w-6 h-6" />
+            <MessageCircle className={isMobile ? "w-5 h-5" : "w-6 h-6"} />
+          </motion.button>
+        )}
+
+        {/* Minimized State - Mobile Only */}
+        {isMinimized && isMobile && (
+          <motion.button
+            key="chat-minimized"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            onClick={() => setIsMinimized(false)}
+            className="fixed bottom-4 right-4 z-40 bg-white text-black px-4 py-2 rounded-full shadow-2xl flex items-center gap-2"
+          >
+            <Bot className="w-4 h-4" />
+            <span className="text-sm font-medium">Chat</span>
           </motion.button>
         )}
       </AnimatePresence>
 
       {/* Chat Window */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && !isMinimized && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-6 right-6 z-40 w-96 h-[600px] bg-gray-950 border border-gray-800 rounded-lg shadow-2xl flex flex-col"
+            className={`fixed z-40 bg-gray-950 border border-gray-800 shadow-2xl flex flex-col ${
+              isMobile 
+                ? 'inset-0 rounded-none' 
+                : 'bottom-6 right-6 w-96 h-[600px] rounded-lg'
+            }`}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-800">
@@ -143,13 +202,24 @@ export function Chatbot() {
                   <p className="text-xs text-gray-500">Always here to help</p>
                 </div>
               </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1 text-gray-500 hover:text-white transition-colors"
-                aria-label="Close chat"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                {isMobile && (
+                  <button
+                    onClick={handleMinimize}
+                    className="p-1 text-gray-500 hover:text-white transition-colors"
+                    aria-label="Minimize chat"
+                  >
+                    <Minimize2 className="w-5 h-5" />
+                  </button>
+                )}
+                <button
+                  onClick={handleClose}
+                  className="p-1 text-gray-500 hover:text-white transition-colors"
+                  aria-label="Close chat"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {/* Messages */}

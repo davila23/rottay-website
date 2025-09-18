@@ -420,9 +420,12 @@ export default function AboutPage() {
           </motion.div>
 
           <div className="relative">
-            {/* Enhanced Vertical Timeline */}
-            <div className="absolute left-[140px] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
-            <div className="absolute left-[139px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-white/10 via-white/20 to-white/10 blur-sm" />
+            {/* Enhanced Vertical Timeline - Hidden on Mobile */}
+            <div className="hidden md:block absolute left-[140px] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+            <div className="hidden md:block absolute left-[139px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-white/10 via-white/20 to-white/10 blur-sm" />
+            
+            {/* Mobile Timeline */}
+            <div className="md:hidden absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
             
             <div className="space-y-16">
               {[
@@ -496,7 +499,7 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                  className={`relative flex items-start ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} group`}
+                  className={`relative flex items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-row group`}
                 >
                   {/* Year Badge */}
                   <motion.div
@@ -504,7 +507,7 @@ export default function AboutPage() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    className={`flex-shrink-0 w-32 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'} pt-4`}
+                    className={`flex-shrink-0 w-32 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'} hidden md:block pt-4`}
                   >
                     <span className="inline-block px-4 py-2 bg-white text-black font-bold text-lg rounded-full shadow-lg transform group-hover:scale-110 transition-all duration-300 border-2 border-gray-800">
                       {milestone.year}
@@ -519,8 +522,12 @@ export default function AboutPage() {
                     transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
                     className="flex-shrink-0 relative z-20"
                   >
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${milestone.color} shadow-2xl flex items-center justify-center group-hover:shadow-xl group-hover:scale-125 transition-all duration-500`}>
-                      <milestone.icon className="w-6 h-6 text-white" />
+                    {/* Mobile Year Badge */}
+                    <div className="md:hidden absolute -left-1 -top-6 px-2 py-1 bg-white text-black font-bold text-xs rounded-full">
+                      {milestone.year}
+                    </div>
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r ${milestone.color} shadow-2xl flex items-center justify-center group-hover:shadow-xl group-hover:scale-125 transition-all duration-500`}>
+                      <milestone.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       {/* Pulsing ring */}
                       <div className={`absolute inset-0 rounded-full ${milestone.accentColor} opacity-20 animate-ping`} />
                     </div>
@@ -532,24 +539,24 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
-                    className={`flex-grow max-w-2xl ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}
+                    className={`flex-grow max-w-2xl ${index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'} ml-4`}
                   >
-                    <div className="bg-gradient-to-br from-gray-900/80 via-black/80 to-gray-950/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 shadow-2xl hover:shadow-3xl hover:border-white/20 transition-all duration-500 group-hover:transform group-hover:scale-105">
+                    <div className="bg-gradient-to-br from-gray-900/80 via-black/80 to-gray-950/80 backdrop-blur-lg border border-white/10 rounded-2xl p-4 md:p-8 shadow-2xl hover:shadow-3xl hover:border-white/20 transition-all duration-500 md:group-hover:transform md:group-hover:scale-105">
                       {/* Glowing border effect */}
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${milestone.color} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500`} />
                       
                       <div className="relative z-10">
-                        <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        <h3 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                           {milestone.title}
                         </h3>
-                        <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+                        <p className="text-gray-300 leading-relaxed mb-4 md:mb-6 text-sm md:text-lg">
                           {milestone.desc}
                         </p>
                         
                         {/* Enhanced Achievements */}
                         <div className="space-y-3">
-                          <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Achievements</h4>
-                          <div className="grid gap-3">
+                          <h4 className="text-xs md:text-sm font-semibold text-gray-400 mb-2 md:mb-3 uppercase tracking-wider">Key Achievements</h4>
+                          <div className="grid gap-2 md:gap-3">
                             {milestone.achievements.map((achievement, i) => (
                               <motion.div
                                 key={i}
@@ -560,7 +567,7 @@ export default function AboutPage() {
                                 className="flex items-center space-x-3 group/item"
                               >
                                 <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${milestone.color} flex-shrink-0 group-hover/item:scale-150 transition-transform duration-300`} />
-                                <span className="text-sm text-gray-400 group-hover/item:text-white transition-colors duration-300">
+                                <span className="text-xs md:text-sm text-gray-400 group-hover/item:text-white transition-colors duration-300">
                                   {achievement}
                                 </span>
                               </motion.div>
