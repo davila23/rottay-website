@@ -1,0 +1,64 @@
+{
+  "name": "ROTTAY - AI & Blockchain Solutions",
+  "short_name": "ROTTAY",
+  "description": "Build and deploy enterprise AI applications with our powerful infrastructure designed for LATAM markets",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "developer", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "type": "image/png",
+      "sizes": "1280x720"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "type": "image/png",
+      "sizes": "1280x720"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Products",
+      "url": "/products",
+      "description": "View our AI and blockchain products"
+    },
+    {
+      "name": "Careers",
+      "url": "/careers",
+      "description": "Join our team"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with us"
+    }
+  ]
+}

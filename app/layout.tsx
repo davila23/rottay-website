@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { OrganizationSchema, WebSiteSchema } from '@/components/seo/schema-markup'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -55,8 +56,18 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
           rel="stylesheet" 
         />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="ROTTAY" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <OrganizationSchema />
+        <WebSiteSchema />
       </head>
-      <body className="font-sans antialiased bg-black text-white min-h-screen" suppressHydrationWarning>{children}</body>
+      <body className="font-sans antialiased bg-black text-white min-h-screen" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }

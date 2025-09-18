@@ -11,8 +11,18 @@ const navigationItems = [
     hasDropdown: true
   },
   {
-    name: 'Company',
-    href: '/company',
+    name: 'About',
+    href: '/about',
+    hasDropdown: false
+  },
+  {
+    name: 'Case Studies',
+    href: '/case-studies',
+    hasDropdown: false
+  },
+  {
+    name: 'Careers',
+    href: '/careers',
     hasDropdown: false
   },
   {

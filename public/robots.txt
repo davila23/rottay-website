@@ -1,0 +1,22 @@
+# Robots.txt for https://rottay.ai
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://rottay.ai/sitemap.xml
+
+# Crawl-delay (in seconds)
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
