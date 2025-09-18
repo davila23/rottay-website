@@ -8,72 +8,72 @@ import Link from 'next/link'
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      id: 'fortune500-recruitment',
-      client: 'Fortune 500 Financial Services',
-      industry: 'Banking & Finance',
-      product: 'BitHire.ai',
-      title: 'Revolutionizing Tech Recruitment at Scale',
-      challenge: 'Manual screening of 10,000+ applications monthly, 120-day average time-to-hire',
-      solution: 'Implemented BitHire.ai with custom AI models trained on company culture and technical requirements',
+      id: 'contact-center-automation',
+      client: 'Major US Telecommunications Provider',
+      industry: 'Telecommunications',
+      product: 'Voice AI Platform',
+      title: 'Automating 70% of Tier-1 Support Calls',
+      challenge: 'Handling 2M+ monthly support calls with average wait times exceeding 15 minutes during peak hours',
+      solution: 'Deployed voice AI agents with custom training on 500K historical call transcripts and real-time sentiment analysis',
       results: [
-        { metric: '75%', label: 'Reduction in time-to-hire' },
-        { metric: '90%', label: 'Improvement in candidate quality' },
-        { metric: '$2.5M', label: 'Annual cost savings' },
-        { metric: '95%', label: 'Hiring manager satisfaction' }
+        { metric: '70%', label: 'Call deflection rate' },
+        { metric: '3.2min', label: 'Average resolution time' },
+        { metric: '$18M', label: 'Annual operational savings' },
+        { metric: '4.6/5', label: 'Customer satisfaction score' }
       ],
-      testimonial: 'BitHire.ai transformed our entire recruitment process. What used to take months now takes weeks.',
-      testimonialAuthor: 'VP of Talent Acquisition'
+      testimonial: 'Rottay\'s voice AI handles complex multi-turn conversations better than any solution we evaluated. Implementation took just 6 weeks.',
+      testimonialAuthor: 'SVP of Customer Experience'
     },
     {
-      id: 'global-events-ticketing',
-      client: 'International Sports League',
-      industry: 'Entertainment & Events',
-      product: 'TicketGenius',
-      title: 'Eliminating Ticket Fraud for Major Sports Events',
-      challenge: '15% of tickets were counterfeit, causing revenue loss and fan disappointment',
-      solution: 'Deployed TicketGenius blockchain-based ticketing system with NFT verification',
+      id: 'healthcare-appointment-scheduling',
+      client: 'Multi-State Healthcare Network',
+      industry: 'Healthcare',
+      product: 'Voice Automation Suite',
+      title: 'HIPAA-Compliant Voice Scheduling System',
+      challenge: 'Managing 500K+ appointment requests monthly across 200 facilities with 40% no-show rate',
+      solution: 'Integrated voice AI with Epic/Cerner EMR systems for automated scheduling, reminders, and rescheduling',
       results: [
-        { metric: '100%', label: 'Fraud elimination' },
-        { metric: '35%', label: 'Increase in secondary market revenue' },
-        { metric: '2M+', label: 'Verified tickets issued' },
-        { metric: '4.9/5', label: 'Fan satisfaction score' }
+        { metric: '85%', label: 'Automated scheduling rate' },
+        { metric: '22%', label: 'Reduction in no-shows' },
+        { metric: '300K', label: 'Staff hours saved annually' },
+        { metric: '100%', label: 'HIPAA compliance maintained' }
       ],
-      testimonial: 'TicketGenius gave us complete control over our ticketing ecosystem while delighting our fans.',
-      testimonialAuthor: 'Chief Revenue Officer'
+      testimonial: 'The platform handles complex scheduling logic across multiple providers and locations seamlessly. ROI achieved in 4 months.',
+      testimonialAuthor: 'Chief Medical Officer'
     },
     {
-      id: 'retail-market-intelligence',
-      client: 'Global E-commerce Platform',
-      industry: 'Retail & E-commerce',
-      product: 'MarketFlow',
-      title: 'AI-Powered Market Intelligence Driving Growth',
-      challenge: 'Struggled to track competitor pricing and market trends across 50+ categories',
-      solution: 'MarketFlow AI continuously analyzes market data, competitor strategies, and consumer sentiment',
+      id: 'financial-services-kyc',
+      client: 'Digital Banking Platform',
+      industry: 'Financial Services',
+      product: 'Voice Biometric Authentication',
+      title: 'Voice-Based KYC Reducing Fraud by 94%',
+      challenge: 'Account takeover fraud costing $2M+ annually with traditional authentication methods',
+      solution: 'Implemented voice biometric authentication with liveness detection and continuous verification',
       results: [
-        { metric: '40%', label: 'Revenue increase' },
-        { metric: '60%', label: 'Faster market response' },
-        { metric: '85%', label: 'Forecast accuracy' },
-        { metric: '250+', label: 'Automated insights daily' }
+        { metric: '94%', label: 'Fraud reduction' },
+        { metric: '8sec', label: 'Average authentication time' },
+        { metric: '99.8%', label: 'Accuracy rate' },
+        { metric: '$1.8M', label: 'Annual fraud losses prevented' }
       ],
-      testimonial: 'MarketFlow is like having a team of 100 analysts working 24/7, but better and faster.',
-      testimonialAuthor: 'Head of Strategy'
+      testimonial: 'Voice biometrics eliminated password-related tickets while significantly improving security. Best infrastructure decision we made.',
+      testimonialAuthor: 'CISO'
     },
     {
-      id: 'fintech-cross-border',
-      client: 'Multinational Corporation',
-      industry: 'Manufacturing',
-      product: 'DollarEx',
-      title: 'Streamlining Global Payments Infrastructure',
-      challenge: 'Complex multi-currency operations with $500M+ monthly transactions across 40 countries',
-      solution: 'DollarEx blockchain rails for instant, transparent cross-border payments',
+      id: 'logistics-dispatch-automation',
+      client: 'National Logistics Provider',
+      industry: 'Transportation & Logistics',
+      product: 'AI Dispatch System',
+      title: 'Automating Fleet Dispatch Operations',
+      challenge: 'Coordinating 5,000+ daily deliveries across 300 drivers with manual dispatch processes',
+      solution: 'Voice-enabled dispatch system with real-time route optimization and driver communication',
       results: [
-        { metric: '95%', label: 'Reduction in transfer time' },
-        { metric: '80%', label: 'Lower transaction costs' },
-        { metric: '$15M', label: 'Annual savings' },
-        { metric: 'T+0', label: 'Settlement time' }
+        { metric: '35%', label: 'Increase in delivery capacity' },
+        { metric: '28%', label: 'Fuel cost reduction' },
+        { metric: '45min', label: 'Average delivery time saved' },
+        { metric: '98.5%', label: 'On-time delivery rate' }
       ],
-      testimonial: 'DollarEx simplified our entire global payment infrastructure. Game-changing technology.',
-      testimonialAuthor: 'CFO'
+      testimonial: 'The voice interface allows our dispatchers to manage 3x more drivers efficiently. Integration with our TMS was seamless.',
+      testimonialAuthor: 'VP of Operations'
     }
   ]
 
@@ -100,11 +100,11 @@ export default function CaseStudiesPage() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Case Studies
+              Customer Success
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Real-world success stories of enterprises transforming their operations 
-              with ROTTAY's AI and blockchain solutions
+              How leading enterprises reduced operational costs by 40% and improved 
+              customer satisfaction scores by 35% with our voice AI platform
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {industries.map((industry) => (
@@ -125,10 +125,10 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '$50M+', label: 'Cost Savings Generated' },
-              { value: '200+', label: 'Enterprise Clients' },
-              { value: '99.9%', label: 'System Uptime' },
-              { value: '4.8/5', label: 'Average Client Rating' }
+              { value: 'Enterprise', label: 'Grade Solutions' },
+              { value: 'Multi-Cloud', label: 'Infrastructure' },
+              { value: '24/7', label: 'Support Available' },
+              { value: 'SOC 2', label: 'Compliant' }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

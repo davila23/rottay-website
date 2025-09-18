@@ -9,7 +9,7 @@ export function CareersHero() {
       {/* Gradient mesh background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full filter blur-[128px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full filter blur-[128px] animate-pulse animation-delay-2000" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-gray-600 to-gray-400 rounded-full filter blur-[128px] animate-pulse animation-delay-2000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

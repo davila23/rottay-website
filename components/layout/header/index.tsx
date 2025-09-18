@@ -6,6 +6,7 @@ import { Logo } from './Logo'
 import { Navigation } from './Navigation'
 import { HeaderActions } from './HeaderActions'
 import { MobileMenu } from './MobileMenu'
+import { ScrollProgress } from '@/components/ui/ScrollProgress'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -42,6 +43,8 @@ export function Header() {
           </div>
         </nav>
       </motion.header>
+      
+      <ScrollProgress />
 
       <MobileMenu 
         isOpen={mobileMenuOpen} 

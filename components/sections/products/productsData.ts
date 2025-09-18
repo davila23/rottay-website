@@ -1,54 +1,56 @@
-import { Briefcase, Ticket, ChartBar, DollarSign } from 'lucide-react'
+import { Phone, Bot, Cloud, Workflow } from 'lucide-react'
 
 export const productsData = [
   {
-    name: 'BitHire.ai',
-    description: 'AI-powered recruitment platform that streamlines hiring with intelligent candidate matching and automated screening processes.',
-    icon: Briefcase,
-    status: 'LIVE',
-    href: 'https://bithire.ai',
-    preview: 'https://bithire.ai',
+    name: 'Voice AI Platform',
+    description: 'Enterprise-grade voice automation with real-time transcription, sentiment analysis, and custom AI agents for contact centers.',
+    icon: Phone,
+    status: 'AVAILABLE',
+    href: '/contact',
     features: [
-      'AI-powered candidate matching',
-      'Automated resume screening',
-      'Interview scheduling',
-      'Analytics dashboard'
+      'Real-time speech-to-text with 98% accuracy',
+      'Multi-language support (English, Spanish, Portuguese)',
+      'Custom voice agent training',
+      'Telephony integration (Twilio, Amazon Connect)'
     ]
   },
   {
-    name: 'TicketGenius',
-    description: 'Smart ticketing system with automated support routing, AI-powered responses, and real-time analytics dashboard.',
-    icon: Ticket,
-    status: 'COMING SOON',
-    href: '/products/ticketgenius',
+    name: 'Workflow Automation',
+    description: 'Intelligent process automation that connects your existing tools and automates repetitive tasks with AI-powered decision making.',
+    icon: Workflow,
+    status: 'AVAILABLE',
+    href: '/contact',
     features: [
-      'Automated ticket routing',
-      'AI-powered responses',
-      'Real-time analytics'
+      'No-code workflow builder',
+      'API integrations with 200+ platforms',
+      'AI-powered decision nodes',
+      'Real-time monitoring and alerts'
     ]
   },
   {
-    name: 'MarketFlow',
-    description: 'Advanced analytics and market intelligence platform for data-driven investment decisions and market analysis.',
-    icon: ChartBar,
-    status: 'COMING SOON',
-    href: '/products/marketflow',
+    name: 'Cloud Infrastructure',
+    description: 'Managed cloud services optimized for AI workloads. Multi-cloud deployment with auto-scaling and cost optimization.',
+    icon: Cloud,
+    status: 'AVAILABLE',
+    href: '/contact',
     features: [
-      'Market intelligence',
-      'Investment analytics',
-      'Real-time data feeds'
+      'Multi-cloud orchestration (AWS, GCP, Azure)',
+      'GPU-optimized compute for ML workloads',
+      'Auto-scaling and load balancing',
+      'Cost optimization and monitoring'
     ]
   },
   {
-    name: 'DollarEx',
-    description: 'Cross-border payment solution leveraging blockchain for fast, secure, and cost-effective international transactions.',
-    icon: DollarSign,
-    status: 'COMING SOON',
-    href: '/products/dollarex',
+    name: 'Custom AI Solutions',
+    description: 'Tailored AI implementations for your specific business needs. From proof of concept to production deployment.',
+    icon: Bot,
+    status: 'CONSULTATION',
+    href: '/contact',
     features: [
-      'Blockchain payments',
-      'Cross-border transfers',
-      'Low transaction fees'
+      'Custom model development and training',
+      'Legacy system integration',
+      'End-to-end implementation',
+      'Ongoing support and optimization'
     ]
   }
 ]

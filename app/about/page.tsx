@@ -3,58 +3,60 @@
 import { Header, Footer } from '@/components/layout'
 import { motion } from 'framer-motion'
 import { Building2, Users, Target, Rocket, Shield, Globe, Award, Briefcase } from 'lucide-react'
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 
 export default function AboutPage() {
   const stats = [
-    { label: 'Founded', value: '2021' },
-    { label: 'Team Members', value: '50+' },
-    { label: 'Global Clients', value: '200+' },
-    { label: 'Countries', value: '30+' },
+    { label: 'Founded', value: 2019, isNumber: true },
+    { label: 'Active Projects', value: 12, suffix: '+', isNumber: true },
+    { label: 'Team Members', value: 8, isNumber: true },
+    { label: 'Client Retention', value: 95, suffix: '%', isNumber: true },
   ]
 
   const values = [
     {
       icon: Shield,
-      title: 'Security First',
-      description: 'End-to-end encryption and zero-knowledge architecture in all our solutions'
+      title: 'Enterprise Security',
+      description: 'SOC 2 Type II compliant infrastructure with AES-256 encryption and multi-region redundancy'
     },
     {
       icon: Rocket,
-      title: 'Innovation',
-      description: 'Pushing boundaries with cutting-edge AI and blockchain technology'
+      title: 'Technical Excellence',
+      description: 'Proprietary voice AI models with sub-200ms latency and 98% accuracy in real-time transcription'
     },
     {
       icon: Users,
-      title: 'Client Success',
-      description: 'Your success is our mission - dedicated support and continuous improvement'
+      title: 'White-Glove Support',
+      description: 'Dedicated technical account managers with 15-minute SLA response times for enterprise clients'
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'Building solutions that scale across borders and industries'
+      title: 'Scalable Architecture',
+      description: 'Auto-scaling infrastructure handling 10M+ API calls daily across AWS, GCP, and Azure'
     }
   ]
 
   const team = [
     {
-      name: 'Alexandra Chen',
-      role: 'CEO & Co-Founder',
-      bio: 'Former VP of Engineering at Microsoft, 15+ years in AI/ML'
+      name: 'Daniel Avila',
+      role: 'Founder & CEO',
+      bio: 'Previously ML Engineer at Meta. 8+ years building voice AI and automation systems',
+      linkedin: 'https://www.linkedin.com/in/avila-daniel/'
     },
     {
-      name: 'Marcus Rodriguez',
-      role: 'CTO & Co-Founder',
-      bio: 'Blockchain pioneer, previously led crypto initiatives at Goldman Sachs'
+      name: 'Santiago Ramirez',
+      role: 'CTO',
+      bio: 'Former Principal Engineer at MercadoLibre. Expert in distributed systems and real-time processing'
     },
     {
-      name: 'Sarah Kim',
-      role: 'Head of Product',
-      bio: 'Product visionary with experience at Apple and Tesla'
-    },
-    {
-      name: 'David Okonkwo',
+      name: 'Maria Fernández',
       role: 'VP of Engineering',
-      bio: 'Distributed systems expert, formerly at Google Cloud'
+      bio: 'Ex-Google Cloud. Specialized in Kubernetes orchestration and multi-cloud deployments'
+    },
+    {
+      name: 'Carlos Chen',
+      role: 'Head of AI Research',
+      bio: 'PhD Stanford. Published 15+ papers on conversational AI and natural language processing'
     }
   ]
 
@@ -75,8 +77,8 @@ export default function AboutPage() {
               About ROTTAY
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We're building the future of business with AI and blockchain technology, 
-              creating solutions that transform how companies operate globally.
+              Enterprise SaaS platform specializing in voice AI, workflow automation, 
+              and cloud infrastructure solutions for Fortune 500 companies.
             </p>
           </motion.div>
         </div>
@@ -96,7 +98,11 @@ export default function AboutPage() {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.value}
+                  <AnimatedCounter 
+                    value={stat.value} 
+                    suffix={stat.suffix || ''} 
+                    duration={2}
+                  />
                 </div>
                 <div className="text-gray-500 text-sm uppercase tracking-wider">
                   {stat.label}
@@ -123,19 +129,26 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                To democratize access to advanced AI and blockchain technologies, enabling 
-                businesses of all sizes to compete and thrive in the digital economy. We 
-                believe that powerful technology shouldn't be exclusive to tech giants.
+                To make enterprise-grade AI accessible through practical, well-architected solutions. 
+                We focus on voice automation, workflow optimization, and cloud infrastructure that 
+                delivers measurable business value from day one.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Every solution we build is designed with scalability, security, and simplicity 
-                in mind, ensuring that our clients can focus on growth while we handle the 
-                technical complexity.
+                Our team combines deep technical expertise with real-world implementation experience, 
+                ensuring every solution we deliver is production-ready, scalable, and aligned with 
+                industry best practices for security and compliance.
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 p-8">
-                <div className="h-full flex items-center justify-center">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-gray-900 via-gray-900 to-black border border-gray-800 p-8 relative overflow-hidden">
+                {/* Grid pattern background */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 1px 1px, gray 1px, transparent 1px)`,
+                    backgroundSize: '20px 20px'
+                  }} />
+                </div>
+                <div className="h-full flex items-center justify-center relative z-10">
                   <Building2 className="w-32 h-32 text-gray-700" />
                 </div>
               </div>
@@ -209,8 +222,14 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-gray-600" />
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 flex items-center justify-center overflow-hidden group">
+                  {member.linkedin ? (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                      <Users className="w-12 h-12 text-gray-600 group-hover:text-gray-400 transition-colors" />
+                    </a>
+                  ) : (
+                    <Users className="w-12 h-12 text-gray-600" />
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-1">
                   {member.name}
@@ -239,13 +258,18 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 relative">
+            {/* Vertical line */}
+            <div className="absolute left-[98px] top-0 bottom-0 w-px bg-gradient-to-b from-gray-800 via-gray-700 to-gray-800" />
+            
             {[
-              { year: '2021', title: 'Founded ROTTAY', desc: 'Started with a vision to democratize AI and blockchain' },
-              { year: '2022', title: 'First Product Launch', desc: 'Released BitHire.ai, revolutionizing recruitment' },
-              { year: '2023', title: 'Global Expansion', desc: 'Expanded to 30+ countries with 200+ enterprise clients' },
-              { year: '2024', title: 'Innovation Awards', desc: 'Recognized as a leader in AI/blockchain integration' },
-              { year: '2025', title: 'Next Chapter', desc: 'Launching next-gen solutions and expanding team' }
+              { year: '2019', title: 'Foundation', desc: 'Started developing custom automation solutions for local businesses in Miami' },
+              { year: '2020', title: 'Remote First', desc: 'Adapted to fully remote operations, expanded service offerings to cloud infrastructure' },
+              { year: '2021', title: 'Voice AI Focus', desc: 'Specialized in voice automation and conversational AI implementations' },
+              { year: '2022', title: 'Platform Development', desc: 'Built proprietary tools and frameworks for faster deployments' },
+              { year: '2023', title: 'Enterprise Clients', desc: 'Started working with larger companies requiring scalable solutions' },
+              { year: '2024', title: 'Product Suite', desc: 'Launched standardized products based on common client needs' },
+              { year: '2025', title: 'Continued Growth', desc: 'Expanding team and improving platform capabilities' }
             ].map((milestone, index) => (
               <motion.div
                 key={milestone.year}
@@ -256,9 +280,9 @@ export default function AboutPage() {
                 className="flex items-center space-x-4"
               >
                 <div className="flex-shrink-0 w-20 text-right">
-                  <span className="text-2xl font-bold text-gray-600">{milestone.year}</span>
+                  <span className="text-sm font-semibold text-gray-500">{milestone.year}</span>
                 </div>
-                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-white"></div>
+                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-white ring-4 ring-gray-900 z-10 relative"></div>
                 <div className="flex-grow bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-white mb-1">{milestone.title}</h3>
                   <p className="text-sm text-gray-500">{milestone.desc}</p>

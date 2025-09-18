@@ -20,9 +20,9 @@ export function HeroContent() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
         >
-          We build AI-powered
+          Voice AI Infrastructure
           <br />
-          software solutions
+          for Enterprise
         </motion.h1>
 
         {/* Subheadline */}
@@ -32,8 +32,8 @@ export function HeroContent() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl mx-auto text-xl text-gray-400 mb-10"
         >
-          Full-stack development studio specializing in artificial intelligence 
-          and blockchain infrastructure.
+          Enterprise voice AI and automation platform. Transform customer interactions 
+          with intelligent workflows and cloud-native infrastructure.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -47,14 +47,14 @@ export function HeroContent() {
             href="/contact"
             className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-black bg-white rounded hover:bg-gray-200 transition-colors"
           >
-            Get Started
+            Schedule Demo
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <Link
-            href="/products"
+            href="https://docs.rottay.ai"
             className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-transparent border-2 border-white rounded hover:bg-white hover:text-black transition-colors"
           >
-            View Products
+            API Documentation
           </Link>
         </motion.div>
 

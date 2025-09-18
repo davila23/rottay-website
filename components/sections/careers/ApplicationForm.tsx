@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Send, Upload, Linkedin, Github, Globe, User, Mail, Phone, FileText, Briefcase, Calendar } from 'lucide-react'
+import { showToast } from '@/components/ui/Toast'
 
 export function ApplicationForm() {
   const [formData, setFormData] = useState({
@@ -52,6 +53,7 @@ export function ApplicationForm() {
     setTimeout(() => {
       setIsSubmitting(false)
       setSubmitStatus('success')
+      showToast('success', 'Application Submitted!', 'We\'ll review your application and get back to you within 48 hours.')
       
       // Reset form after 3 seconds
       setTimeout(() => {
@@ -315,20 +317,30 @@ export function ApplicationForm() {
 
             {/* Submit Button */}
             <div className="flex flex-col items-center">
-              <button
+              <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center text-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center text-lg relative overflow-hidden group"
               >
-                {isSubmitting ? (
-                  <span>Submitting...</span>
-                ) : (
-                  <>
-                    Submit Application
-                    <Send className="ml-2 w-5 h-5" />
-                  </>
-                )}
-              </button>
+                <span className="relative z-10 flex items-center">
+                  {isSubmitting ? (
+                    <span>Submitting...</span>
+                  ) : (
+                    <>
+                      Submit Application
+                      <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-100"
+                  initial={{ x: '-100%' }}
+                  whileHover={{ x: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.button>
 
               {submitStatus === 'success' && (
                 <motion.div
