@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { TextReveal, MagneticButton, GradientText } from '@/components/ui/animations'
 
 const rotatingTexts = [
   "AI-powered solutions",
@@ -40,25 +41,26 @@ export function HeroEnhanced() {
 
       {/* Main Headline with rotating text */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
         className="text-center"
       >
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-          We build the future
-          <br />
-          <span className="text-4xl md:text-6xl">with </span>
+          <TextReveal text="We build the future" className="block" delay={0.2} />
+          <span className="text-4xl md:text-6xl">
+            <TextReveal text="with " className="inline" delay={0.5} />
+          </span>
           <AnimatePresence mode="wait">
             <motion.span
               key={textIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-6xl bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent"
+              className="text-4xl md:text-6xl inline-block"
             >
-              {rotatingTexts[textIndex]}
+              <GradientText>{rotatingTexts[textIndex]}</GradientText>
             </motion.span>
           </AnimatePresence>
         </h1>
@@ -82,19 +84,23 @@ export function HeroEnhanced() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <Link
-          href="/contact"
-          className="group inline-flex items-center justify-center px-8 py-3 text-base font-medium text-black bg-white rounded hover:bg-gray-200 transition-all"
-        >
-          Start Building
-          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
-        <Link
-          href="#products"
-          className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-transparent border border-gray-700 rounded hover:border-gray-500 transition-all"
-        >
-          Explore Products
-        </Link>
+        <MagneticButton>
+          <Link
+            href="/contact"
+            className="group inline-flex items-center justify-center px-8 py-3 text-base font-medium text-black bg-white rounded liquid-button hover:bg-gray-200 transition-all relative overflow-hidden"
+          >
+            <span className="relative z-10">Start Building</span>
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform relative z-10" />
+          </Link>
+        </MagneticButton>
+        <MagneticButton>
+          <Link
+            href="#products"
+            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-transparent border border-gray-700 rounded hover:border-gray-500 transition-all glass"
+          >
+            Explore Products
+          </Link>
+        </MagneticButton>
       </motion.div>
     </div>
   )

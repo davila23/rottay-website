@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ExternalLink, LucideIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Tilt3D } from '@/components/ui/animations'
 
 interface ProductCardProps {
   name: string
@@ -32,21 +33,22 @@ export function ProductCard({
   const isExternal = href.startsWith('http')
   
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      onMouseEnter={() => setShowPreview(true)}
-      onMouseLeave={() => setShowPreview(false)}
-      className="h-full relative"
-    >
-      <Link
-        href={href}
-        target={isExternal ? '_blank' : '_self'}
-        rel={isExternal ? 'noopener noreferrer' : undefined}
-        className="group block h-full bg-gray-950 rounded-lg border border-gray-800 hover:border-gray-600 transition-all duration-300 overflow-hidden"
+    <Tilt3D className="h-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        onMouseEnter={() => setShowPreview(true)}
+        onMouseLeave={() => setShowPreview(false)}
+        className="h-full relative"
       >
+        <Link
+          href={href}
+          target={isExternal ? '_blank' : '_self'}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+          className="group block h-full bg-gray-950 rounded-lg border border-gray-800 hover:border-gray-600 transition-all duration-300 overflow-hidden hover-glow"
+        >
         <div className="p-8">
           {/* Status Badge */}
           <div className="mb-6 flex items-center justify-between">
@@ -130,7 +132,8 @@ export function ProductCard({
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
-      </Link>
-    </motion.div>
+        </Link>
+      </motion.div>
+    </Tilt3D>
   )
 }
