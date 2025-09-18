@@ -206,12 +206,12 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-[720px] -translate-x-1/4"
+                  className="absolute top-full left-0 mt-2 w-[800px] -translate-x-1/4"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
-                    <div className="grid grid-cols-3 gap-0">
+                    <div className="grid grid-cols-[300px_250px_250px] gap-0">
                       {portfolioSections.map((section, sectionIndex) => (
                         <div 
                           key={section.title}
@@ -236,7 +236,7 @@ export function Navigation() {
                                     </div>
                                     <div className="flex-1 min-w-0">
                                       <div className="flex items-start justify-between gap-2">
-                                        <span className="font-medium text-gray-900 text-sm truncate">
+                                        <span className="font-medium text-gray-900 text-sm whitespace-nowrap">
                                           {item.name}
                                         </span>
                                         {item.status && (
