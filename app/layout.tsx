@@ -1,9 +1,44 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Rottay | AI & Blockchain Solutions for Latin America',
-  description: 'Build and deploy enterprise AI applications with our powerful infrastructure designed for LATAM markets',
+  title: 'ROTTAY | AI & Blockchain Solutions for Latin America',
+  description: 'Build and deploy enterprise AI applications with our powerful infrastructure designed for LATAM markets. Specialized in AI recruitment, smart ticketing, and blockchain payments.',
+  keywords: 'AI, Blockchain, Latin America, LATAM, Miami, Software Development, Machine Learning, Web3, BitHire, TicketGenius, MarketFlow, DollarEx',
+  authors: [{ name: 'Rottay' }],
+  creator: 'Rottay',
+  publisher: 'Rottay',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://rottay.ai',
+    siteName: 'Rottay',
+    title: 'Rottay | AI & Blockchain Solutions for Latin America',
+    description: 'Build and deploy enterprise AI applications with our powerful infrastructure designed for LATAM markets',
+    images: [
+      {
+        url: 'https://rottay.ai/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rottay - AI & Blockchain Solutions',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rottay | AI & Blockchain Solutions',
+    description: 'Build and deploy enterprise AI applications with our powerful infrastructure',
+    creator: '@rottay',
+    images: ['https://rottay.ai/og-image.png'],
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#000000',
 }
 
 export default function RootLayout({

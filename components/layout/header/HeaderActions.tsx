@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
+import { SearchModal } from '@/components/ui/search'
 
 interface HeaderActionsProps {
   onMobileMenuToggle: () => void
@@ -11,6 +12,11 @@ interface HeaderActionsProps {
 export function HeaderActions({ onMobileMenuToggle }: HeaderActionsProps) {
   return (
     <div className="flex items-center space-x-4">
+      {/* Search */}
+      <div className="hidden md:block">
+        <SearchModal />
+      </div>
+      
       {/* Desktop CTA */}
       <motion.div 
         whileHover={{ scale: 1.02 }}
@@ -20,6 +26,7 @@ export function HeaderActions({ onMobileMenuToggle }: HeaderActionsProps) {
         <Link
           href="/contact"
           className="px-6 py-2.5 bg-white text-black rounded-lg hover:bg-gray-100 transition-all duration-200 font-medium"
+          aria-label="Contact us"
         >
           Contact
         </Link>

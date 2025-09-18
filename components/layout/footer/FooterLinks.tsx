@@ -26,8 +26,8 @@ const linkGroups = [
   {
     title: 'Connect',
     links: [
-      { name: 'GitHub', href: 'https://github.com/rottay', external: true },
-      { name: 'LinkedIn', href: 'https://linkedin.com/company/rottay', external: true },
+      { name: 'GitHub', href: 'https://github.com/ROTTAY', external: true },
+      { name: 'LinkedIn', href: 'https://linkedin.com/company/ROTTAY', external: true },
       { name: 'Email', href: 'mailto:hello@rottay.ai' },
       { name: '+1 (305) 555-0123', href: 'tel:+13055550123' }
     ]

@@ -14,7 +14,7 @@ export function Logo() {
           <span className="font-bold text-black text-sm">R</span>
         </div>
         <span className="font-bold text-xl text-white tracking-tight">
-          Rottay
+          ROTTAY
         </span>
       </Link>
     </motion.div>

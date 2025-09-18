@@ -1,4 +1,4 @@
-# Rottay - AI & Blockchain Solutions
+# ROTTAY - AI & Blockchain Solutions
 
 A modern, professional website for Rottay built with Next.js, TypeScript, and Tailwind CSS featuring smooth animations and a sophisticated design.
 
@@ -125,7 +125,7 @@ NEXT_PUBLIC_API_URL=your_api_url
 
 ## 📄 License
 
-This project is proprietary and confidential. All rights reserved by Rottay.
+This project is proprietary and confidential. All rights reserved by ROTTAY.
 
 ## 📧 Contact
 
@@ -133,4 +133,4 @@ For inquiries, please contact: hello@rottay.ai
 
 ---
 
-Built with ❤️ by Rottay Team
+Built with ❤️ by ROTTAY Team

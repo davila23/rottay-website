@@ -1,4 +1,4 @@
-# Rottay - Final Architecture
+# ROTTAY - Final Architecture
 
 ## The Vision
 **Minimal content. Maximum visual impact.**
@@ -29,7 +29,7 @@
 
 ### 1. Header (Invisible until scroll)
 ```
-Rottay                                          Contact
+ROTTAY                                          Contact
 ```
 
 ### 2. Hero Section

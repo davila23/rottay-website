@@ -1,5 +1,5 @@
 export const companyInfo = {
-  name: 'Rottay',
+  name: 'ROTTAY',
   tagline: 'AI-Powered Digital Transformation',
   description: 'Leading the future of technology with AI and blockchain solutions',
   location: {

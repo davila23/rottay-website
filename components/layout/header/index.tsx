@@ -28,17 +28,19 @@ export function Header() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled 
-            ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-cyan-500/10 border-b border-gray-900' 
+            ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-gray-900' 
             : 'bg-black/80 backdrop-blur-sm'
         }`}
+        role="banner"
+        aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Primary navigation">
           <div className="flex justify-between items-center h-16">
             <Logo />
             <Navigation />
             <HeaderActions onMobileMenuToggle={() => setMobileMenuOpen(true)} />
           </div>
-        </div>
+        </nav>
       </motion.header>
 
       <MobileMenu 

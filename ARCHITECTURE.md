@@ -1,4 +1,4 @@
-# Rottay - Premium Architecture
+# ROTTAY - Premium Architecture
 
 ## Design Philosophy
 **No bullshit. Just powerful technology.**
@@ -8,7 +8,7 @@
 ### Layer 1: Spatial Computing Interface
 ```
 [Invisible Header - Appears on Scroll]
-├── Rottay (minimal mark)
+├── ROTTAY (minimal mark)
 ├── Products | Platform | Developers
 └── Access Portal (not "demo" - that's weak)
 

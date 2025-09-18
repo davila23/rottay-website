@@ -1,4 +1,4 @@
-# Rottay - Site Proposal
+# ROTTAY - Site Proposal
 
 ## Concept
 **We build software. Period.**
@@ -8,7 +8,7 @@ No buzzwords. No corporate speak. Just exceptional products.
 
 ### Header (Minimal)
 ```
-Rottay                                Products   Company   GitHub   Contact
+ROTTAY                                Products   Company   GitHub   Contact
 ```
 
 ### Section 1: Opening Statement
@@ -73,7 +73,7 @@ Miami Beach, FL
 
 ### Footer (Essential Only)
 ```
-© 2024 Rottay
+© 2024 ROTTAY
 Miami Beach, FL
 
 GitHub | LinkedIn | Contact
