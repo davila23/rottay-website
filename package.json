@@ -33,7 +33,6 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
-    "@aws-amplify/adapter-nextjs": "^1.6.9",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
