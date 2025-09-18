@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Building2, Users, Target, Rocket, Shield, Globe, Award, Briefcase } from 'lucide-react'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 import { SimpleAnimatedIcon } from '@/components/3d/simple-animated-icons'
+import { LocationIcon } from '@/components/3d/location-icons'
 
 export default function AboutPage() {
   const stats = [
@@ -378,53 +379,333 @@ export default function AboutPage() {
       </section>
 
       {/* Journey Section */}
-      <section className="py-24 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-gray-950 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 50% 50%, white 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+            animation: 'pulse 8s ease-in-out infinite'
+          }} />
+        </div>
+        
+        {/* Floating elements */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full opacity-20 animate-pulse" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-white rounded-full opacity-30 animate-ping" />
+        <div className="absolute bottom-32 left-20 w-1.5 h-1.5 bg-white rounded-full opacity-25 animate-bounce" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From startup to global technology leader
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-400 mb-6"
+            >
+              ✨ Our Story
+            </motion.div>
+            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+              Our Journey
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              From Miami startup to global technology leader with offices across Americas
             </p>
           </motion.div>
 
-          <div className="space-y-8 relative">
-            {/* Vertical line */}
-            <div className="absolute left-[98px] top-0 bottom-0 w-px bg-gradient-to-b from-gray-800 via-gray-700 to-gray-800" />
+          <div className="relative">
+            {/* Enhanced Vertical Timeline */}
+            <div className="absolute left-[140px] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+            <div className="absolute left-[139px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-white/10 via-white/20 to-white/10 blur-sm" />
             
-            {[
-              { year: '2019', title: 'Foundation', desc: 'Started developing custom automation solutions for local businesses in Miami' },
-              { year: '2020', title: 'Remote First', desc: 'Adapted to fully remote operations, expanded service offerings to cloud infrastructure' },
-              { year: '2021', title: 'Voice AI Focus', desc: 'Specialized in voice automation and conversational AI implementations' },
-              { year: '2022', title: 'Platform Development', desc: 'Built proprietary tools and frameworks for faster deployments' },
-              { year: '2023', title: 'Enterprise Clients', desc: 'Started working with larger companies requiring scalable solutions' },
-              { year: '2024', title: 'Product Suite', desc: 'Launched standardized products based on common client needs' },
-              { year: '2025', title: 'Continued Growth', desc: 'Expanding team and improving platform capabilities' }
-            ].map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center space-x-4"
-              >
-                <div className="flex-shrink-0 w-20 text-right">
-                  <span className="text-sm font-semibold text-gray-500">{milestone.year}</span>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-white ring-4 ring-gray-900 z-10 relative"></div>
-                <div className="flex-grow bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-1">{milestone.title}</h3>
-                  <p className="text-sm text-gray-500">{milestone.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            <div className="space-y-16">
+              {[
+                { 
+                  year: '2019', 
+                  title: 'Foundation in Miami', 
+                  desc: 'ROTTAY founded in Miami, FL by Daniel Avila. Started developing custom automation solutions for local businesses, establishing our commitment to practical, results-driven technology.',
+                  icon: Building2,
+                  achievements: ['Initial team of 3 developers', 'First 10 local clients', 'Focus on workflow automation'],
+                  color: 'from-white to-gray-300',
+                  accentColor: 'bg-white'
+                },
+                { 
+                  year: '2020', 
+                  title: 'Design System & Remote Operations', 
+                  desc: 'Created our first comprehensive design system and transitioned to fully remote operations. Expanded service offerings to include cloud infrastructure and established our 100% remote-first culture.',
+                  icon: Globe,
+                  achievements: ['Proprietary design system launched', 'Remote team across 5 countries', 'Cloud infrastructure services'],
+                  color: 'from-gray-300 to-gray-500',
+                  accentColor: 'bg-gray-400'
+                },
+                { 
+                  year: '2021', 
+                  title: 'Multi-Tenancy Architecture', 
+                  desc: 'Developed advanced multi-tenant SaaS architecture enabling us to serve multiple enterprise clients simultaneously with isolated, scalable environments.',
+                  icon: Shield,
+                  achievements: ['Multi-tenant platform architecture', 'SOC 2 Type II compliance', 'Enterprise security framework'],
+                  color: 'from-white to-gray-400',
+                  accentColor: 'bg-gray-300'
+                },
+                { 
+                  year: '2022', 
+                  title: 'AWS Partnership & Buenos Aires Office', 
+                  desc: 'Became official AWS Solution Partners and opened our Buenos Aires office to better serve the Latin American market. Specialized in voice AI and conversational interfaces.',
+                  icon: Award,
+                  achievements: ['AWS Solution Partner status', 'Buenos Aires office opened', 'Voice AI specialization', 'LATAM market expansion'],
+                  color: 'from-gray-400 to-gray-600',
+                  accentColor: 'bg-gray-500'
+                },
+                { 
+                  year: '2023', 
+                  title: 'BitHire.ai Development', 
+                  desc: 'Launched BitHire.ai, our flagship AI-powered recruitment platform. Revolutionized technical hiring with automated screening, voice interviews, and intelligent candidate matching.',
+                  icon: Users,
+                  achievements: ['BitHire.ai platform launched', 'AI-powered recruitment', 'Voice interview automation', '1000+ companies onboarded'],
+                  color: 'from-gray-200 to-gray-500',
+                  accentColor: 'bg-gray-400'
+                },
+                { 
+                  year: '2024', 
+                  title: 'CryptoHire & Process Automation', 
+                  desc: 'Introduced CryptoHire for blockchain talent acquisition and automated interview processes. Implemented end-to-end recruitment automation and expanded platform capabilities.',
+                  icon: Briefcase,
+                  achievements: ['CryptoHire specialization', 'Automated interview processes', 'Enhanced platform features', 'Blockchain talent network'],
+                  color: 'from-white to-gray-400',
+                  accentColor: 'bg-gray-300'
+                },
+                { 
+                  year: '2025', 
+                  title: 'Global Expansion & Innovation', 
+                  desc: 'Continuing growth with strategic offices (Miami FL, Buenos Aires), enhanced AI capabilities, and expanding our voice AI platform to serve Fortune 500 companies worldwide.',
+                  icon: Rocket,
+                  achievements: ['2 strategic locations', 'Fortune 500 clients', 'Advanced voice AI platform', 'Global talent network'],
+                  color: 'from-gray-300 to-gray-600',
+                  accentColor: 'bg-gray-400'
+                }
+              ].map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60, y: 30 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                  className={`relative flex items-start ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} group`}
+                >
+                  {/* Year Badge */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                    className={`flex-shrink-0 w-32 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'} pt-4`}
+                  >
+                    <span className="inline-block px-4 py-2 bg-white text-black font-bold text-lg rounded-full shadow-lg transform group-hover:scale-110 transition-all duration-300 border-2 border-gray-800">
+                      {milestone.year}
+                    </span>
+                  </motion.div>
+
+                  {/* Timeline Node */}
+                  <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
+                    className="flex-shrink-0 relative z-20"
+                  >
+                    <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${milestone.color} shadow-2xl flex items-center justify-center group-hover:shadow-xl group-hover:scale-125 transition-all duration-500`}>
+                      <milestone.icon className="w-6 h-6 text-white" />
+                      {/* Pulsing ring */}
+                      <div className={`absolute inset-0 rounded-full ${milestone.accentColor} opacity-20 animate-ping`} />
+                    </div>
+                  </motion.div>
+
+                  {/* Content Card */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
+                    className={`flex-grow max-w-2xl ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}
+                  >
+                    <div className="bg-gradient-to-br from-gray-900/80 via-black/80 to-gray-950/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 shadow-2xl hover:shadow-3xl hover:border-white/20 transition-all duration-500 group-hover:transform group-hover:scale-105">
+                      {/* Glowing border effect */}
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${milestone.color} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500`} />
+                      
+                      <div className="relative z-10">
+                        <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+                          {milestone.desc}
+                        </p>
+                        
+                        {/* Enhanced Achievements */}
+                        <div className="space-y-3">
+                          <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Achievements</h4>
+                          <div className="grid gap-3">
+                            {milestone.achievements.map((achievement, i) => (
+                              <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.1 + 0.6 + i * 0.1 }}
+                                className="flex items-center space-x-3 group/item"
+                              >
+                                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${milestone.color} flex-shrink-0 group-hover/item:scale-150 transition-transform duration-300`} />
+                                <span className="text-sm text-gray-400 group-hover/item:text-white transition-colors duration-300">
+                                  {achievement}
+                                </span>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
+
+          {/* Office Locations */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-32"
+          >
+            <div className="text-center mb-16">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-400 mb-6"
+              >
+                🌎 Global Offices
+              </motion.div>
+              <h3 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Our Global Presence
+              </h3>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                Strategic locations across the Americas to serve our global clientele
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              {[
+                {
+                  city: 'Miami, FL',
+                  role: 'Global Headquarters',
+                  description: 'Main operations, strategic planning, and North American market development',
+                  established: '2019',
+                  color: 'from-white to-gray-400',
+                  accentColor: 'bg-white',
+                  flag: '🇺🇸',
+                  timezone: 'EST',
+                  focus: ['Strategic Operations', 'Business Development', 'Enterprise Sales']
+                },
+                {
+                  city: 'Buenos Aires',
+                  role: 'LATAM Hub & Development Center',
+                  description: 'Latin American operations, regional partnerships, core development team, and technical innovation',
+                  established: '2022',
+                  color: 'from-gray-300 to-gray-600',
+                  accentColor: 'bg-gray-400',
+                  flag: '🇦🇷',
+                  timezone: 'ART',
+                  focus: ['Regional Partnerships', 'Product Development', 'Technical Innovation', 'Engineering Team']
+                }
+              ].map((office, index) => (
+                <motion.div
+                  key={office.city}
+                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="group relative"
+                >
+                  <div className="bg-gradient-to-br from-gray-900/50 via-black/50 to-gray-950/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 text-center hover:border-white/20 transition-all duration-500 group-hover:transform group-hover:scale-105 relative overflow-hidden">
+                    {/* Glowing background effect */}
+                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${office.color} opacity-0 group-hover:opacity-10 blur-xl transition-all duration-500`} />
+                    
+                    {/* Flag and timezone badge */}
+                    <div className="flex justify-between items-start mb-6 relative z-10">
+                      <span className="text-2xl">{office.flag}</span>
+                      <span className="px-3 py-1 bg-white/10 backdrop-blur-sm text-xs text-gray-400 rounded-full">
+                        {office.timezone}
+                      </span>
+                    </div>
+                    
+                    {/* 3D Icon */}
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+                      className="relative z-10 mb-6"
+                    >
+                      <div className="w-24 h-24 rounded-2xl bg-black/20 backdrop-blur-sm border border-white/20 shadow-2xl mx-auto group-hover:shadow-xl group-hover:scale-110 transition-all duration-500 overflow-hidden">
+                        <LocationIcon type={office.city === 'Miami, FL' ? 'miami' : 'argentina'} />
+                      </div>
+                    </motion.div>
+                    
+                    <div className="relative z-10">
+                      <h4 className="text-2xl font-bold text-white mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        {office.city}
+                      </h4>
+                      <p className={`text-lg font-semibold bg-gradient-to-r ${office.color} bg-clip-text text-transparent mb-3`}>
+                        {office.role}
+                      </p>
+                      <p className="text-sm text-gray-400 mb-6 leading-relaxed">
+                        {office.description}
+                      </p>
+                      
+                      {/* Focus areas */}
+                      <div className="space-y-2 mb-6">
+                        <h5 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Focus Areas</h5>
+                        <div className="space-y-2">
+                          {office.focus.map((area, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.4, delay: index * 0.2 + 0.5 + i * 0.1 }}
+                              className="flex items-center justify-center space-x-2"
+                            >
+                              <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${office.color}`} />
+                              <span className="text-xs text-gray-500">{area}</span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Established badge */}
+                      <motion.span
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.2 + 0.7 }}
+                        className="inline-block px-4 py-2 bg-white text-black text-xs font-semibold rounded-full shadow-lg border border-gray-300"
+                      >
+                        Est. {office.established}
+                      </motion.span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
